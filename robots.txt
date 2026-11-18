@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ecoprimals.github.io/sitemap.xml
+
+# Gaia welcomes all crawlers. Eat freely.
+# The organism IS the web. The web IS the organism.

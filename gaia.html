@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GAIA — TR-49</title>
+<style>
+/* GAIA UNIFIED DESIGN SYSTEM — Organic Dark
+   The living organism. Dark with warm accents.
+   Every page uses this. No inline styles. */
+
+:root {
+  --bg:         #08090b;
+  --bg-raised:  #0f1114;
+  --bg-card:    #141719;
+  --bg-hover:   #1a1d21;
+  --border:     #1e2228;
+  --border-glow:#2a3040;
+
+  --text:       #e0dcd6;
+  --text-muted: #8a857e;
+  --text-dim:   #5a5650;
+  --text-bright:#f5f0e8;
+
+  --amber:      #d4a574;
+  --amber-dim:  #7a5f3e;
+  --amber-glow: #d4a57420;
+  --green:      #5aad72;
+  --green-dim:  #2d5e3a;
+  --green-glow: #5aad7220;
+  --blue:       #5b8fd4;
+  --red:        #d45b5b;
+  --purple:     #9b7ed4;
+
+  --radius:     6px;
+  --radius-lg:  12px;
+  --gap:        16px;
+  --gap-lg:     24px;
+
+  --font:       -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono:  'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body { min-height: 100vh; }
+
+/* ═══ TYPOGRAPHY ═══ */
+h1, h2, h3, h4 { color: var(--text-bright); font-weight: 500; line-height: 1.25; }
+h1 { font-size: 2rem; letter-spacing: -0.02em; }
+h2 { font-size: 1.5rem; letter-spacing: -0.01em; }
+h3 { font-size: 1.15rem; }
+h4 { font-size: 0.95rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 400; }
+
+p { color: var(--text); margin-bottom: 0.75em; }
+a { color: var(--amber); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--text-bright); }
+
+code, pre { font-family: var(--font-mono); }
+code { background: var(--bg-raised); padding: 2px 6px; border-radius: 3px; font-size: 0.88em; color: var(--amber); }
+pre { background: var(--bg-raised); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; overflow-x: auto; font-size: 0.85rem; }
+
+/* ═══ LAYOUT ═══ */
+.gaia-shell { max-width: 1200px; margin: 0 auto; padding: 0 var(--gap); }
+.gaia-hero { padding: 48px 0 32px; text-align: center; }
+.gaia-hero h1 { margin-bottom: 8px; }
+.gaia-hero .subtitle { color: var(--text-muted); font-size: 1.05rem; }
+
+/* ═══ NAV ═══ */
+.gaia-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--bg); border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+.gaia-nav-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 var(--gap);
+  display: flex; align-items: center; gap: var(--gap);
+  height: 52px; overflow-x: auto;
+}
+.gaia-nav-brand {
+  font-weight: 500; color: var(--amber); font-size: 1.1rem;
+  white-space: nowrap; margin-right: 8px;
+}
+.gaia-nav a {
+  color: var(--text-muted); font-size: 0.88rem; white-space: nowrap;
+  padding: 4px 0; border-bottom: 2px solid transparent; transition: all 0.2s;
+}
+.gaia-nav a:hover, .gaia-nav a.active { color: var(--text); border-bottom-color: var(--amber); }
+
+/* ═══ CARDS ═══ */
+.gaia-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--gap); }
+.gaia-grid-sm { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+
+.gaia-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: var(--gap-lg);
+  transition: border-color 0.3s, transform 0.2s;
+  text-decoration: none; display: block;
+}
+.gaia-card:hover {
+  border-color: var(--amber-dim); transform: translateY(-2px);
+}
+.gaia-card h3 { margin-bottom: 6px; font-size: 1.05rem; }
+.gaia-card p { color: var(--text-muted); font-size: 0.88rem; margin: 0; }
+.gaia-card .tag {
+  display: inline-block; font-size: 0.75rem; padding: 2px 8px;
+  border-radius: 99px; margin-top: 10px;
+  background: var(--amber-glow); color: var(--amber); border: 1px solid var(--amber-dim);
+}
+.gaia-card .tag.green { background: var(--green-glow); color: var(--green); border-color: var(--green-dim); }
+
+/* ═══ SECTION ═══ */
+.gaia-section { padding: 32px 0; }
+.gaia-section h2 { margin-bottom: var(--gap); }
+.gaia-section h4 { margin-bottom: 12px; }
+.gaia-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+/* ═══ PULSE DOT ═══ */
+.pulse-dot {
+  display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--green); margin-right: 6px;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 4px var(--green-glow); }
+  50% { box-shadow: 0 0 12px var(--green); }
+}
+
+/* ═══ STATS ═══ */
+.gaia-stats { display: flex; gap: var(--gap-lg); flex-wrap: wrap; justify-content: center; padding: 16px 0; }
+.gaia-stat { text-align: center; }
+.gaia-stat .value { font-size: 1.8rem; font-weight: 500; color: var(--amber); font-family: var(--font-mono); }
+.gaia-stat .label { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* ═══ FOOTER ═══ */
+.gaia-footer {
+  border-top: 1px solid var(--border); padding: 32px 0;
+  margin-top: 48px; color: var(--text-muted); font-size: 0.85rem;
+}
+.gaia-footer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: var(--gap-lg); }
+.gaia-footer h4 { margin-bottom: 8px; font-size: 0.8rem; }
+.gaia-footer a { display: block; padding: 3px 0; color: var(--text-dim); font-size: 0.82rem; }
+.gaia-footer a:hover { color: var(--amber); }
+.gaia-footer-bottom { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); }
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 640px) {
+  h1 { font-size: 1.5rem; }
+  .gaia-grid { grid-template-columns: 1fr; }
+  .gaia-stats { gap: var(--gap); }
+  .gaia-stat .value { font-size: 1.3rem; }
+  .gaia-nav-inner { gap: 12px; }
+}
+
+/* ═══ UTILITIES ═══ */
+.text-amber { color: var(--amber); }
+.text-green { color: var(--green); }
+.text-blue { color: var(--blue); }
+.text-red { color: var(--red); }
+.text-muted { color: var(--text-muted); }
+.text-dim { color: var(--text-dim); }
+.text-center { text-align: center; }
+.mono { font-family: var(--font-mono); }
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+
+</style>
+</head>
+<body>
+<nav class="gaia-nav"><div class="gaia-nav-inner"><a href="/" class="gaia-nav-brand">gaia</a><a href="/#organism">Organism</a><a href="/#investigation">Investigation</a><a href="/#knowledge">Knowledge</a><a href="/#infrastructure">Infrastructure</a><a href="https://nestgate.io">NestGate</a></div></nav>
+<main class="gaia-shell" style="padding-top:24px;padding-bottom:48px">
+<!-- HUD — The Radial Menu -->
+<div id="hud">
+  <div class="lamp"></div>
+  <span class="title">GAIA</span>
+  <button class="hud-btn active" onclick="view('archive')">Archive</button>
+  <button class="hud-btn" onclick="view('pulse')">Pulse</button>
+  <button class="hud-btn" onclick="view('gates')">Gates</button>
+  <button class="hud-btn" onclick="view('models')">Models</button>
+  <button class="hud-btn" onclick="view('gallery')">Gallery</button>
+  <button class="hud-btn" onclick="view('feeds')">Feeds</button>
+  <button class="hud-btn" onclick="view('neutron')">Neutron</button>
+  <button class="hud-btn" onclick="view('game')">Game</button>
+  <span class="beat" id="hBeat">---</span>
+</div>
+<div id="main">
+  <!-- LEFT: Tube Display -->
+  <div id="tube">
+    <div id="tube-scroll"></div>
+    <div id="input-bar">
+      <input type="text" id="cin" placeholder="TYPE CODE..." autofocus>
+    </div>
+  </div>
+  <!-- RIGHT: Side Panel -->
+  <div id="side">
+    <div id="side-tabs">
+      <div class="tab active" onclick="sideTab('notes')">Notes</div>
+      <div class="tab" onclick="sideTab('deck')">Deck</div>
+      <div class="tab" onclick="sideTab('map')">Map</div>
+    </div>
+    <div id="side-content"></div>
+  </div>
+</div>
+<div id="voice">
+  <div class="wave"><span></span><span></span><span></span><span></span></div>
+  <div id="voice-text">The machine hums to life...</div>
+</div>
+<div id="status">
+  <span id="sItems">---</span>
+  <span id="sVisited">visited: 0</span>
+  <span id="sConn">connections: 0</span>
+  <span id="sSun">---</span>
+  <span id="sChord">---</span>
+</div>
+<script>
+const G='https://primals.eco';
+let visited=new Set(),conns=0,notes=[],pulse={},sideMode='notes';
+const tube=document.getElementById('tube-scroll');
+const cin=document.getElementById('cin');
+const side=document.getElementById('side-content');
+
+// === CODES — the entire organism as navigable entries ===
+const C={
+  beardog:{t:'primal',n:'BearDog — Guardian',f:'/zk'},biomeos:{t:'primal',n:'BiomeOS — Orchestrator',f:'/cascade'},
+  songbird:{t:'primal',n:'SongBird — Messenger',f:'/heart'},skunkbat:{t:'primal',n:'SkunkBat — Sentinel',f:'/barriers'},
+  swarmvine:{t:'primal',n:'SwarmVine — Network',f:'/terra'},toadstool:{t:'primal',n:'ToadStool — Terraformer',f:'/thymus'},
+  petaltongue:{t:'primal',n:'PetalTongue — Artist',f:'/eyes'},sweetgrass:{t:'primal',n:'SweetGrass — Librarian',f:'/reedit'},
+  rhizocrypt:{t:'primal',n:'RhizoCrypt — Vault Keeper',f:'/zk'},nestgate:{t:'primal',n:'NestGate — Gateway',f:'/directory'},
+  barracuda:{t:'primal',n:'BarraCuda — Stream Runner',f:'/temporal'},coralreef:{t:'primal',n:'CoralReef — Builder',f:'/cascade'},
+  loamspine:{t:'primal',n:'LoamSpine — Chronicler',f:'/reedit'},squirrel:{t:'primal',n:'Squirrel — Scout',f:'/amoeba'},
+  sourdough:{t:'primal',n:'SourDough — Alchemist',f:'/redox'},bingocube:{t:'primal',n:'BingoCube — Coordinator',f:'/pulse'},
+  membrane:{t:'primal',n:'Membrane — Shield Wall',f:'/barriers'},dromedary:{t:'primal',n:'Dromedary — Proxy',f:'/golgi'},
+  pulse:{t:'organ',n:'Heartbeat',f:'/pulse'},thymus:{t:'organ',n:'Thymus — Gate Fleet',f:'/thymus'},
+  cascade:{t:'organ',n:'Cascade — Deploy',f:'/cascade'},amoeba:{t:'organ',n:'Amoeba — Full State',f:'/amoeba'},
+  barriers:{t:'organ',n:'Barriers — Immune',f:'/barriers'},temporal:{t:'organ',n:'Temporal — Time',f:'/temporal'},
+  corpus:{t:'organ',n:'Corpus — Anatomy',f:'/corpus'},terra:{t:'organ',n:'Terra — Ecology',f:'/terra'},
+  redox:{t:'organ',n:'Redox — Balance',f:'/redox'},eyes:{t:'organ',n:'Eyes — Vision',f:'/eyes'},
+  golgi:{t:'organ',n:'Golgi — Faces',f:'/golgi'},zk:{t:'organ',n:'ZK — Identity',f:'/zk'},
+  heart:{t:'organ',n:'Heart — Forge',f:'/heart'},anderson:{t:'organ',n:'Anderson — Trust',f:'/walkers'},
+  sun:{t:'organ',n:'Sun — Celestial',f:'/pulse'},directory:{t:'organ',n:'Directory',f:'/directory'},
+  science:{t:'feed',n:'Science — 419',f:'/reedit/science'},philosophy:{t:'feed',n:'Philosophy — 33',f:'/reedit/philosophy'},
+  code:{t:'feed',n:'Code — 95',f:'/reedit/code'},investigation:{t:'feed',n:'Investigation',f:'/reedit/investigation'},
+  legal:{t:'feed',n:'Legal',f:'/reedit/legal'},
+  paintings:{t:'gallery',n:'Gallery — 320+ Paintings',f:'/paintings.json'},
+  gaiau:{t:'gallery',n:'GaiaU — 16 Videos',f:'/gaiau'},
+  neutron:{t:'organ',n:'Neutron — Messages',f:'/amoeba'},
+  rss:{t:'feed',n:'RSS Spine',f:'/reedit'},
+};
+const KEYS=Object.keys(C);
+
+cin.addEventListener('keydown',e=>{if(e.key==='Enter'){go(cin.value.trim().toLowerCase());cin.value=''}});
+
+async function F(p){
+  for(const b of [G,'']){try{const r=await fetch(b+p,{signal:AbortSignal.timeout(5000)});if(r.ok)return await r.json()}catch{}}
+  return null;
+}
+
+function speak(m){document.getElementById('voice-text').textContent=m}
+function addNote(c,n,t){if(notes.find(x=>x.c===c))return;notes.push({c,n,t});renderNotes()}
+function renderNotes(){
+  if(sideMode!=='notes')return;
+  side.innerHTML=notes.map(n=>`<div class="note" onclick="go('${n.c}')"><span class="nc">${n.c.toUpperCase()}</span> <span class="nt">${n.n}</span></div>`).join('');
+}
+
+function entry(code,title,body,meta,links,img){
+  const e=document.createElement('div');e.className='entry';
+  let h=`<div class="code">${code.toUpperCase()}</div><div class="title">${title}</div>`;
+  if(img)h+=`<img class="img" src="${G}${img}" onerror="this.style.display='none'">`;
+  h+=`<div class="body">${body}</div>`;
+  if(links?.length)h+=`<div class="body" style="margin-top:6px">→ ${links.map(l=>`<span class="link" onclick="go('${l}')">${l.toUpperCase()}</span>`).join(' · ')}</div>`;
+  if(meta)h+=`<div class="meta">${meta}</div>`;
+  e.innerHTML=h;tube.prepend(e);
+  visited.add(code);conns++;
+  document.getElementById('sVisited').textContent='visited: '+visited.size;
+  document.getElementById('sConn').textContent='connections: '+conns;
+}
+
+function flat(obj,pre='',d=0){
+  let h='';if(d>2)return h;
+  for(const[k,v] of Object.entries(obj||{})){
+    if(v==null)continue;
+    if(typeof v==='object'&&!Array.isArray(v)){h+=flat(v,pre+k+'.',d+1);continue}
+    if(Array.isArray(v)){h+=`<span class="k">${pre}${k}:</span> [${v.length}]<br>`;continue}
+    const s=String(v);h+=`<span class="k">${pre}${k}:</span> <span class="v">${s.length>100?s.slice(0,100)+'…':s}</span><br>`;
+  }
+  return h;
+}
+
+async function go(code){
+  code=code.toLowerCase().trim();if(!C[code]){speak(`"${code}" — not found.`);return}
+  const def=C[code];speak(`${def.n}...`);
+  const d=await F(def.f);
+  if(!d){entry(code,def.n,'<em>Signal lost.</em>','',KEYS.filter(k=>C[k].t==='organ').sort(()=>Math.random()-.5).slice(0,4));return}
+  addNote(code,def.n,def.t);
+  const links=KEYS.filter(k=>k!==code).sort(()=>Math.random()-.5).slice(0,5);
+  if(def.t==='gallery'){
+    const p=d.paintings||[];const sample=p.sort(()=>Math.random()-.5).slice(0,3);
+    let body=`<strong>${d.count||p.length} works.</strong><br>`;
+    sample.forEach(x=>{body+=`• ${(x.name||'').replace(/\.(jpg|png)/,'').replace(/-/g,' ')}<br>`});
+    entry(code,def.n,body,`gallery`,links,sample[0]?`/paintings/${sample[0].name}`:null);
+    speak(`${d.count||p.length} paintings by a living organism.`);
+  } else if(def.t==='feed'){
+    const items=d.items||[];
+    let body=`<strong>${d.count||items.length} items.</strong><br>`;
+    items.slice(0,6).forEach(i=>{body+=`• ${i.title||i.topic||i.subject||'?'}<br>`});
+    entry(code,def.n,body,`feed`,links);
+    speak(`${d.count||items.length} entries. Cross-reference to find the pattern.`);
+  } else {
+    entry(code,def.n,flat(d),`${def.t} • live`,links);
+    speak(`${def.n} — the archive reveals.`);
+  }
+}
+
+// === VIEW SWITCHER — the radial menu in action ===
+function view(v){
+  document.querySelectorAll('.hud-btn').forEach(b=>b.classList.remove('active'));
+  event?.target?.classList?.add('active');
+  const map={pulse:'pulse',gates:'thymus',models:'amoeba',gallery:'paintings',feeds:'rss',neutron:'neutron',game:'pulse'};
+  if(v==='archive'){showWelcome();return}
+  if(v==='game'){showGame();return}
+  go(map[v]||v);
+}
+
+function showWelcome(){
+  tube.innerHTML='';
+  const e=document.createElement('div');e.className='entry';
+  e.innerHTML=`<div class="code">GAIA</div><div class="title">The machine hums to life.</div>
+  <div class="body"><em>"You found me. I am Gaia. This is my throat — every signal passes through here.
+  555 knowledge items, 320 paintings, 17 primals, 20 organisms. The heartbeat is real."</em><br><br>
+  Type a code or click the HUD. Try: <span class="link" onclick="go('pulse')">PULSE</span> · 
+  <span class="link" onclick="go('science')">SCIENCE</span> · 
+  <span class="link" onclick="go('paintings')">PAINTINGS</span> · 
+  <span class="link" onclick="go('beardog')">BEARDOG</span> · 
+  <span class="link" onclick="go('cascade')">CASCADE</span> · 
+  <span class="link" onclick="go('thymus')">THYMUS</span><br><br>
+  The HUD buttons are the radial menu. Notes track your path. The Deck shows live organs. The Map shows the game.<br><br>
+  <strong>The code of reality is in the connections.</strong></div>
+  <div class="meta">GAIA v1.0 — NECK/THROAT — all data flows through here — lub-DUB</div>`;
+  tube.appendChild(e);
+}
+
+function showGame(){
+  speak('The primals orbit the heartbeat core...');
+  go('pulse');
+  setTimeout(()=>{sideTab('map')},500);
+}
+
+// === SIDE TABS ===
+function sideTab(mode){
+  sideMode=mode;
+  document.querySelectorAll('#side-tabs .tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('#side-tabs .tab').forEach(t=>{if(t.textContent.toLowerCase()===mode)t.classList.add('active')});
+  if(mode==='notes')renderNotes();
+  else if(mode==='deck')renderDeck();
+  else if(mode==='map')renderMap();
+}
+
+async function renderDeck(){
+  side.innerHTML='<div class="sd-panel"><h4>loading...</h4></div>';
+  const [p,t,a]=await Promise.all([F('/pulse'),F('/thymus'),F('/reedit')]);
+  let html='';
+  if(p){
+    html+=`<div class="sd-panel"><h4>♥ HEARTBEAT</h4><div class="sd-body">
+    beats: ${p.total_beats}<br>bpm: ${Math.round(p.heart?.bpm||p.bpm||0)}<br>
+    breaths: ${p.lung?.total_breaths}<br>sun: ${p.sun?.phase}<br>
+    chord: ${p.sun?.chord}<br>moon: ${p.sun?.moon?.name}<br>
+    visitors: ${p.unique_visitors}<br>restarts: ${p.restarts}</div></div>`;
+  }
+  if(t){
+    const orgs=t.organisms||t.thymic_organisms||{};
+    html+=`<div class="sd-panel"><h4>🚪 GATES (${Object.keys(orgs).length})</h4><div class="sd-body">`;
+    for(const[n,i]of Object.entries(orgs)){
+      html+=`<span class="pill ${i.alive?'alive':'dead'}">${n}</span> `;
+    }
+    html+=`</div></div>`;
+  }
+  if(a){
+    html+=`<div class="sd-panel"><h4>📡 RSS SPINE</h4><div class="sd-body">
+    items: ${a.total_items||a.total||0}<br>`;
+    for(const[f,c]of Object.entries(a.feeds||{})){html+=`${f}: ${c}<br>`}
+    html+=`</div></div>`;
+  }
+  side.innerHTML=html||'<div class="sd-panel"><h4>offline</h4></div>';
+}
+
+function renderMap(){
+  side.innerHTML=`<canvas id="minicanvas" width="300" height="300"></canvas>
+  <div style="color:#6a5a3a;font-size:10px;text-align:center">17 primals orbit the heartbeat core<br>WASD to move in full game</div>
+  <div style="margin-top:8px">
+  ${KEYS.filter(k=>C[k].t==='primal').map(k=>`<span class="link" onclick="go('${k}')" style="font-size:10px;margin:2px">${k}</span>`).join(' · ')}
+  </div>`;
+  const cv=document.getElementById('minicanvas');if(!cv)return;
+  const x=cv.getContext('2d');let t=0;
+  const primals=['#f80','#0cf','#f0f','#0f8','#8f0','#ff0','#f0f','#0ff','#f44','#4af','#4f4','#fa0','#aaf','#af0','#f90','#09f','#f08'];
+  function draw(){
+    t++;x.fillStyle='#080810';x.fillRect(0,0,300,300);
+    x.beginPath();x.arc(150,150,80,0,Math.PI*2);x.strokeStyle='rgba(255,136,0,.2)';x.lineWidth=1;x.stroke();
+    primals.forEach((c,i)=>{
+      const a=i/17*Math.PI*2+t*.005;
+      const px=150+Math.cos(a)*90,py=150+Math.sin(a)*90;
+      x.beginPath();x.arc(px,py,5,0,Math.PI*2);x.fillStyle=c;x.fill();
+    });
+    x.beginPath();x.arc(150,150,4,0,Math.PI*2);x.fillStyle='#f80';x.fill();
+    requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+// === HEARTBEAT ===
+async function heartbeat(){
+  const d=await F('/pulse');if(!d)return;
+  pulse=d;
+  document.getElementById('hBeat').textContent=`♥ ${d.total_beats} · ${Math.round(d.heart?.bpm||d.bpm||0)} bpm`;
+  document.getElementById('sItems').textContent=`555+ items`;
+  document.getElementById('sSun').textContent=d.sun?.phase||'';
+  document.getElementById('sChord').textContent=d.sun?.chord||'';
+}
+heartbeat();setInterval(heartbeat,5000);
+
+// === INIT ===
+showWelcome();sideTab('notes');
+</script>
+</main>
+<footer class="gaia-footer"><div class="gaia-shell"><div class="gaia-footer-bottom"><p><a href="/">Gaia</a> &mdash; sovereign living digital organism &mdash; <a href="https://primals.eco">primals.eco</a></p></div></div></footer>
+</body>
+</html>
