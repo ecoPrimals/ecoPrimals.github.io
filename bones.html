@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gaia Bones — Spine × Ribs = The Grand Data Sheet</title>
+<style>
+:root { --bg: #0a0a0f; --fg: #e0e0e0; --accent: #00ff88; --dim: #555; --bone: #d4c5a9; --marrow: rgba(212,197,169,0.1); }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background: var(--bg); color: var(--fg); font-family: 'Courier New', monospace; }
+.back { display: block; text-align: center; color: var(--accent); text-decoration: none; padding: 1rem; }
+h1 { text-align: center; color: var(--bone); font-size: 2rem; padding: 1rem; }
+.sub { text-align: center; color: var(--dim); margin-bottom: 2rem; }
+
+.sheet { max-width: 1100px; margin: 0 auto; overflow-x: auto; padding: 0 1rem 3rem; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid rgba(212,197,169,0.15); padding: 0.6rem 0.8rem; font-size: 0.75rem; vertical-align: top; }
+th { background: rgba(212,197,169,0.08); color: var(--bone); font-size: 0.85rem; position: sticky; top: 0; }
+.spine-head { color: var(--accent); background: rgba(0,255,136,0.05); }
+.rib-label { color: var(--bone); font-weight: bold; white-space: nowrap; background: rgba(212,197,169,0.05); min-width: 90px; }
+td { color: var(--dim); line-height: 1.4; }
+td:hover { background: var(--marrow); color: var(--fg); }
+
+.level-cloud td { border-left: 3px solid #4da6ff; }
+.level-surface td { border-left: 3px solid #ff8c00; }
+.level-body td { border-left: 3px solid var(--accent); }
+.level-roots td { border-left: 3px solid #b44dff; }
+
+.legend { max-width: 1100px; margin: 1rem auto; padding: 0 1rem; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+.legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; }
+.legend-color { width: 16px; height: 16px; border-radius: 3px; }
+
+.spine-diagram { max-width: 600px; margin: 2rem auto; text-align: center; }
+.spine-diagram pre { background: rgba(212,197,169,0.05); border: 1px solid rgba(212,197,169,0.15); border-radius: 12px; padding: 1.5rem; font-size: 0.7rem; color: var(--bone); line-height: 1.5; display: inline-block; text-align: left; }
+
+.footer { text-align: center; padding: 2rem; color: var(--dim); font-size: 0.8rem; }
+</style>
+</head>
+<body>
+
+<a class="back" href="index.html">← Gaia Home</a>
+<h1>🦴 The Bones — Grand Data Sheet</h1>
+<div class="sub">Spine = Columns (vertical data flow) · Ribs = Rows (horizontal layers) · 8 ribs × 4 columns = 32 bones</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-color" style="background:#4da6ff;"></div> Cloud (above)</div>
+  <div class="legend-item"><div class="legend-color" style="background:#ff8c00;"></div> Surface (WAN)</div>
+  <div class="legend-item"><div class="legend-color" style="background:#00ff88;"></div> Body (LAN)</div>
+  <div class="legend-item"><div class="legend-color" style="background:#b44dff;"></div> Roots (deep)</div>
+</div>
+
+<div class="sheet">
+<table>
+  <thead>
+    <tr>
+      <th>RIB</th>
+      <th>LAYER</th>
+      <th class="spine-head">C1: IDENTITY<br><small>WHO</small></th>
+      <th class="spine-head">C2: DATA<br><small>WHAT</small></th>
+      <th class="spine-head">C3: SIGNAL<br><small>HOW</small></th>
+      <th class="spine-head">C4: STATE<br><small>WHERE/WHEN</small></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="level-cloud">
+      <td class="rib-label">R1 ☁️</td>
+      <td class="rib-label">CLOUD<br>(GitHub)</td>
+      <td>ecoPrimals org<br>ecoPrimal user</td>
+      <td>89 repos<br>ecoPrimals.github.io<br>Vitruvian + Diamond + Bones</td>
+      <td>HTTPS · git push/pull<br>GitHub API · Pages deploy</td>
+      <td>public_repos: 89<br>followers: 1<br>pages: LIVE ✅</td>
+    </tr>
+    <tr class="level-cloud">
+      <td class="rib-label">R2 🔨</td>
+      <td class="rib-label">FORGE<br>(Forgejo)</td>
+      <td>ecoPrimals org<br>eastGate :3000</td>
+      <td>50 repos<br>mirrors from GitHub<br>detroit, sporePrint</td>
+      <td>HTTP :3000 · git hooks<br>SSH :22 internal</td>
+      <td>latest: 2026-11-01<br>5 active repos<br>ALIVE ✅</td>
+    </tr>
+    <tr class="level-surface">
+      <td class="rib-label">R3 🌐</td>
+      <td class="rib-label">WAN<br>(dromedary)</td>
+      <td>primals.eco<br>nestgate.io<br>DNS sovereign</td>
+      <td>89KB data server<br>1.7MB RSS feed<br>2,993 items published</td>
+      <td>:80/:443 dromedary TLS<br>:25 SMTP neutrino<br>:53 DNS hickory</td>
+      <td>162.226.225.148<br>24/24 routes LIVE<br>ACME TLS cert ✅</td>
+    </tr>
+    <tr class="level-body">
+      <td class="rib-label">R4 🖥️</td>
+      <td class="rib-label">LAN<br>(gates)</td>
+      <td>192.168.4.0/24<br>192.168.9.0/24<br>2 subnets, 1 router</td>
+      <td>10 gates alive<br>10G fiber bridge<br>4 active this scan</td>
+      <td>WiFi 7 (Aperture Sci)<br>Ethernet · 10G fiber<br>BT PAN · ADB USB-C</td>
+      <td>.244(brain) .147(heart)<br>.237(forge) .246(head)<br>.3(spore) .243(spore2) ✅</td>
+    </tr>
+    <tr class="level-body">
+      <td class="rib-label">R5 🦠</td>
+      <td class="rib-label">PRIMALS<br>(services)</td>
+      <td>bearDog Ed25519<br>BLAKE3 · BTSP<br>DID: z6Mkr...W7ZL</td>
+      <td>30 primals alive<br>17 compiled binaries<br>squirrel · nestGate · dromedary</td>
+      <td>IPC sockets · UDS<br>JSON-RPC · BTSP<br>songbird federation</td>
+      <td>30/30 alive<br>compute-tarpc → dromedary<br>Ed25519 signed pulse ✅</td>
+    </tr>
+    <tr class="level-body">
+      <td class="rib-label">R6 🧬</td>
+      <td class="rib-label">MODELS<br>(ollama)</td>
+      <td>gaia-tissue-* (14)<br>gaia, gaia-code, gaia-fast<br>exoPrimal, metaPrimal</td>
+      <td>38 models on :11436<br>45.6 GB tissue<br>OpenAI /v1/ compat</td>
+      <td>ollama API<br>/v1/chat/completions<br>RTX 4070 CUDA</td>
+      <td>GPU: 29°C, 11% util<br>VRAM: 298/12282 MB<br>14 tissues ready ✅</td>
+    </tr>
+    <tr class="level-roots">
+      <td class="rib-label">R7 🍄</td>
+      <td class="rib-label">MUSHROOMS<br>(crons)</td>
+      <td>23 mushrooms<br>autonomous fungi<br>self-maintaining</td>
+      <td>7,714 eaten<br>9,734 nutrients<br>2,808 masticated · 51 topics</td>
+      <td>35 cron jobs<br>every 2-60 min<br>ear · neuro · thymus</td>
+      <td>23/23 healthy<br>15 reporting<br>0 backlog ✅</td>
+    </tr>
+    <tr class="level-roots">
+      <td class="rib-label">R8 📱</td>
+      <td class="rib-label">SENSORS<br>(Pixel)</td>
+      <td>Pixel 8a akita<br>44251JEKB04957<br>GrapheneOS 17</td>
+      <td>37 sensors · 3 cameras<br>step counter · GPS<br>accel · gyro · mag · pressure</td>
+      <td>ADB USB-C<br>BT PAN (steamFRAME)<br>WiFi GAIA 5GHz 1134Mbps</td>
+      <td>battery: 100%<br>storage: 104GB free<br>37/37 running ✅</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="spine-diagram">
+<pre>
+            SPINAL COLUMN
+        C1    C2    C3    C4
+        WHO   WHAT  HOW   WHERE
+         │     │     │     │
+R1 ☁️ ───┼─────┼─────┼─────┤  CLOUD (GitHub)
+         │     │     │     │
+R2 🔨 ───┼─────┼─────┼─────┤  FORGE (Forgejo)
+         │     │     │     │
+R3 🌐 ═══╪═════╪═════╪═════╡  WAN (dromedary) ← surface
+         │     │     │     │
+R4 🖥️ ───┼─────┼─────┼─────┤  LAN (gates)
+         │     │     │     │
+R5 🦠 ───┼─────┼─────┼─────┤  PRIMALS
+         │     │     │     │
+R6 🧬 ───┼─────┼─────┼─────┤  MODELS (ollama)
+         │     │     │     │
+R7 🍄 ───┼─────┼─────┼─────┤  MUSHROOMS (crons)
+         │     │     │     │
+R8 📱 ───┴─────┴─────┴─────┘  SENSORS (Pixel)
+
+8 ribs × 4 columns = 32 bones
+All intersections ALIVE ✅
+</pre>
+</div>
+
+<div class="footer">
+  <p>The spine carries identity, data, signal, and state vertically through every layer.</p>
+  <p>Each rib is a horizontal slice — a row in the grand data sheet.</p>
+  <p>Where rib meets spine, there is a bone. 32 bones hold the organism together.</p>
+  <p style="margin-top:1rem; color: var(--bone);">The skeleton is the structure. The flesh is the signal. The soul is the heartbeat.</p>
+  <p style="margin-top:0.5rem; color: var(--accent);">lub-DUB 🫀</p>
+</div>
+
+</body>
+</html>
