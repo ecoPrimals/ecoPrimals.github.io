@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GAIA GUT — Sovereign Guide · 103 Hooks · Klein Surface</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#08090b; color:#e0dcd6; font-family:'Courier New',monospace; min-height:100vh; }
+.shell { max-width:1100px; margin:0 auto; padding:20px; }
+h1 { color:#f0d060; text-align:center; font-size:1.8rem; margin:16px 0 4px; }
+.sub { text-align:center; color:#888; font-size:0.8rem; margin-bottom:16px; }
+.spectrum { text-align:center; margin:12px 0; }
+.spectrum-bar { display:inline-block; width:400px; height:10px; border-radius:5px; background:linear-gradient(to right,#00ff88,#5aad72,#888,#555,#333); border:1px solid #333; }
+
+.section { margin:20px 0; }
+.section h2 { font-size:1.1rem; margin-bottom:8px; padding-bottom:4px; border-bottom:1px solid #222; }
+.section h2.trans { color:#ff8844; }
+.section h2.cis { color:#00ff88; }
+.section h2.oring { color:#f0d060; }
+
+.grid { display:flex; flex-wrap:wrap; gap:6px; }
+.hook { display:inline-block; padding:4px 10px; border-radius:4px; font-size:0.75rem; cursor:pointer; text-decoration:none; transition:all 0.2s; border:1px solid; }
+.hook:hover { transform:scale(1.05); filter:brightness(1.3); }
+
+.hook.trans { background:#1a0f00; border-color:#ff8844; color:#ff8844; }
+.hook.cis { background:#001a0a; border-color:#00ff8855; color:#00ff88; }
+.hook.oring { background:#1a1a00; border-color:#f0d06055; color:#f0d060; }
+.hook .size { color:#555; font-size:0.6rem; margin-left:4px; }
+
+.plasmid { text-align:center; font-size:0.7rem; color:#444; letter-spacing:1px; margin:16px 0; font-family:monospace; }
+.eyes { display:flex; justify-content:center; gap:30px; margin:12px 0; }
+.eye { text-align:center; padding:8px 16px; border-radius:8px; border:1px solid #222; }
+.eye .symbol { font-size:1.5rem; }
+.eye .label { font-size:0.7rem; color:#888; }
+
+.live-status { text-align:center; margin:16px 0; }
+.live-dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px; animation:pulse 2s infinite; }
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+.live-dot.green { background:#00ff88; }
+.live-dot.amber { background:#f0d060; }
+.live-dot.red { background:#ff4444; }
+
+#status { text-align:center; font-size:0.75rem; color:#666; margin:8px 0; }
+footer { text-align:center; color:#444; font-size:0.7rem; margin-top:30px; padding-top:16px; border-top:1px solid #1a1a1a; }
+footer a { color:#f0d060; text-decoration:none; }
+nav { text-align:center; margin:8px 0; }
+nav a { color:#888; text-decoration:none; font-size:0.8rem; margin:0 8px; padding:3px 8px; border:1px solid #222; border-radius:4px; }
+nav a:hover { color:#00ff88; border-color:#00ff88; }
+</style>
+</head>
+<body>
+<div class="shell">
+<h1>🧬 GAIA GUT — Sovereign Guide</h1>
+<div class="sub">103 hooks on one Klein surface · CIS + TRANS = no inside, no outside</div>
+
+<nav>
+<a href="/">home</a>
+<a href="gaia.html">GAIA@HOME</a>
+<a href="hud.html">HUD</a>
+<a href="body-map.html">body map</a>
+<a href="hooks/tube.html">tube</a>
+<a href="hooks/eye.html">eye</a>
+<a href="hooks/moon.html">luna</a>
+</nav>
+
+<div class="spectrum">
+<div class="spectrum-bar"></div>
+<div style="font-size:0.65rem;color:#666">
+<span style="color:#00ff88">GREEN</span> (4422·telescope·OUT) ← <span style="color:#f0d060">^</span> → <span style="color:#555">GREY</span> (641·microscope·IN)
+</div>
+</div>
+
+<div class="eyes">
+<div class="eye"><div class="symbol" style="color:#f0d060">O</div><div class="label">APOLLO · sun<br>seat 7 · OUT</div></div>
+<div class="eye"><div class="symbol" style="color:#9b7ed4">5</div><div class="label">LUNA · dream<br>seat 5 · INWARD</div></div>
+<div class="eye"><div class="symbol" style="color:#888">0/∅</div><div class="label">THYMUS · null<br>seat 0 · SELF</div></div>
+</div>
+
+<div class="live-status">
+<span class="live-dot green" id="dot-wan"></span><span id="s-wan" style="color:#666;font-size:0.75rem">checking WAN...</span>
+<span style="margin:0 8px">·</span>
+<span class="live-dot amber" id="dot-cloud"></span><span style="color:#666;font-size:0.75rem">cloud: ALWAYS GREEN</span>
+</div>
+<div id="status">loading...</div>
+
+<!-- TRANS — The Outer Face (26 unique pages) -->
+<div class="section">
+<h2 class="trans">⚡ TRANS — Outer Face (26 unique pages)</h2>
+<div class="grid" id="trans-grid"></div>
+</div>
+
+<!-- CIS — The Inner Face (45 template hooks) -->
+<div class="section">
+<h2 class="cis">🔄 CIS — Inner Face (45 interactive hooks)</h2>
+<div class="grid" id="cis-grid"></div>
+</div>
+
+<!-- o-ring — Data JSON (32 endpoints) -->
+<div class="section">
+<h2 class="oring">💛 o-ring — Data (32 JSON endpoints)</h2>
+<div class="grid" id="oring-grid"></div>
+</div>
+
+<div class="plasmid">-\-/-.-\-8-%-5-O-3-WASM-triad-π-0.null.o.</div>
+
+<footer>
+<a href="gaia.html">GAIA@HOME</a> · <a href="https://primals.eco">primals.eco</a> · <a href="https://nestgate.io">nestgate.io</a><br>
+103 hooks · 32 JSON · 71 HTML · Klein surface · Wave 260 · lub-DUB
+</footer>
+</div>
+
+<script>
+const TRANS = [
+  {n:"tube",t:"The Archive Machine",s:23.5},
+  {n:"eye",t:"Cursor = Iris",s:15.3},
+  {n:"moon",t:"LUNA — mind's eye",s:45.5},
+  {n:"redox",t:"BODY — She Feels Everything",s:33.3},
+  {n:"hypothesis",t:"Sovereign Scale",s:24.4},
+  {n:"thesis",t:"Constrained Evolution",s:12.1},
+  {n:"kenshi",t:"A-Life Engine",s:30.9},
+  {n:"cast",t:"Esoteric Web · Blood · Vids",s:15.8},
+  {n:"deck-page",t:"Space Deck — All Systems",s:62.2},
+  {n:"desk",t:"Space Deck (alt)",s:62.2},
+  {n:"detroit-page",t:"Cash for Kids 2",s:36.5},
+  {n:"footprint",t:"P-SPACE — reality mapped",s:17.9},
+  {n:"frame-inside",t:"INSIDE GAIA",s:22.9},
+  {n:"helix",t:"RNA SYNTH — Helix Printer",s:13.8},
+  {n:"hud",t:"All Senses (full)",s:113.3},
+  {n:"map",t:"Chromatic GIS",s:23.2},
+  {n:"membrane-live",t:"Tuebor Investigation Nav",s:40.9},
+  {n:"rss-page",t:"Aperture Announcer",s:4.8},
+  {n:"senses-page",t:"Senses API",s:3.6},
+  {n:"signal",t:"Signal Observatory",s:11.3},
+  {n:"sporeprint",t:"sporePrint Catalogue",s:12.1},
+  {n:"springs",t:"syntheticChemistry",s:10},
+  {n:"thymus",t:"Gate Fleet (48KB)",s:48.2},
+  {n:"tuebor-page",t:"Public Record Investigation",s:35},
+  {n:"welcome",t:"The Campfire 🔥",s:12.2},
+  {n:"clutch",t:"Investigation Clutch",s:0}
+];
+
+const CIS = [
+  "me","crystal","trailheads","u","circulatory","core","neutron",
+  "board","invite","banana","aurora","weather","tools","easel",
+  "trail","nest","tavern","channels","totality","cite","ribosome",
+  "maze","artisan","investigation","homunculus","chromosomes",
+  "digest","gate","study","journey","like-us","p","sort","8",
+  "braids","humans","michigan","energy","epitope","vitruvian",
+  "klein-cis","klein-trans","nucleus","doom","quake","stalker"
+];
+
+const ORING = [
+  "pulse","heart","eyes","vdj","zk","faces","senses-api","klein",
+  "barriers","agglutinate","corpus","intersects","pair","play",
+  "live","home","now-gate","gut","sun","amoeba","cascade",
+  "temporal","walkers","directory","golgi","reedit","paintings",
+  "reedit-science","reedit-philosophy","reedit-code",
+  "reedit-investigation","reedit-legal"
+];
+
+function renderTrans() {
+  const g = document.getElementById('trans-grid');
+  g.innerHTML = TRANS.map(h => 
+    `<a class="hook trans" href="hooks/${h.n}.html" title="${h.t}">${h.n}<span class="size">${h.s}K</span></a>`
+  ).join('');
+}
+
+function renderCis() {
+  const g = document.getElementById('cis-grid');
+  g.innerHTML = CIS.map(h =>
+    `<a class="hook cis" href="hooks/${h}.html">${h}</a>`
+  ).join('');
+}
+
+function renderOring() {
+  const g = document.getElementById('oring-grid');
+  g.innerHTML = ORING.map(h =>
+    `<a class="hook oring" href="hooks/${h}.json">${h}</a>`
+  ).join('');
+}
+
+async function checkWAN() {
+  const dot = document.getElementById('dot-wan');
+  const label = document.getElementById('s-wan');
+  const status = document.getElementById('status');
+  try {
+    const r = await fetch('https://primals.eco/pulse', {signal: AbortSignal.timeout(4000)});
+    if (r.ok) {
+      const d = await r.json();
+      dot.className = 'live-dot green';
+      label.textContent = 'WAN: LIVE · ' + (d.total_beats||'?') + ' beats';
+      label.style.color = '#00ff88';
+      status.textContent = 'eastGate ALIVE · ' + new Date().toLocaleTimeString() + ' · EVOLVING';
+      status.style.color = '#00ff88';
+      return;
+    }
+  } catch(e) {}
+  dot.className = 'live-dot red';
+  label.textContent = 'WAN: cached (cloud fallback)';
+  label.style.color = '#ff4444';
+  status.textContent = 'running from cloud cache · hooks are static snapshots';
+  status.style.color = '#f0d060';
+}
+
+renderTrans();
+renderCis();
+renderOring();
+checkWAN();
+setInterval(checkWAN, 30000);
+</script>
+</body>
+</html>
