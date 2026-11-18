@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TOUCH — primals.eco Klein Surface</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap');
+:root { --bg:#060810; --fg:#c9d1d9; --green:#3fb950; --blue:#58a6ff; --gold:#c9a84c; --red:#f85149; --violet:#bc8cff; --dim:#6e7681; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'JetBrains Mono',monospace; background:var(--bg); color:var(--fg); height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; overflow:hidden; }
+.title { font-size:1.5rem; color:var(--green); margin-bottom:2rem; letter-spacing:3px; }
+.klein { display:flex; gap:4rem; margin:2rem 0; }
+.hand { display:flex; flex-direction:column; align-items:center; gap:1rem; padding:2rem 3rem; border-radius:16px; cursor:pointer; transition:all 0.3s; text-decoration:none; }
+.hand:hover { transform:scale(1.05); }
+.up { border:1px solid var(--gold); color:var(--gold); }
+.up:hover { background:rgba(201,168,76,0.08); border-color:var(--gold); box-shadow:0 0 30px rgba(201,168,76,0.1); }
+.down { border:1px solid var(--violet); color:var(--violet); }
+.down:hover { background:rgba(188,140,255,0.08); border-color:var(--violet); box-shadow:0 0 30px rgba(188,140,255,0.1); }
+.hand-icon { font-size:3rem; }
+.hand-label { font-size:0.8rem; font-weight:700; }
+.hand-sub { font-size:0.55rem; color:var(--dim); max-width:200px; text-align:center; }
+.center { display:flex; flex-direction:column; align-items:center; gap:0.5rem; margin:2rem 0; }
+.klein-face { font-size:2rem; animation:pulse 3s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:0.6;transform:scale(1)} 50%{opacity:1;transform:scale(1.1)} }
+.eq { font-size:0.6rem; color:var(--dim); }
+.links { display:flex; gap:1rem; margin-top:2rem; font-size:0.55rem; }
+.links a { color:var(--dim); text-decoration:none; }
+.links a:hover { color:var(--fg); }
+.footer { position:fixed; bottom:1rem; font-size:0.5rem; color:var(--dim); }
+</style>
+</head>
+<body>
+<div class="title">TOUCH THE KLEIN SURFACE</div>
+
+<div class="klein">
+  <a class="hand up" href="https://github.com/ecoPrimal/ecoPrimals" title="UP → GitHub (code, commits, contribute)">
+    <span class="hand-icon">☀️</span>
+    <span class="hand-label">UP → GitHub</span>
+    <span class="hand-sub">Push code. See commits. The organism's source. Public nerve.</span>
+  </a>
+  
+  <a class="hand down" href="https://en.wikipedia.org/wiki/Special:Random" title="DOWN → Wikipedia (absorb, learn, grey nutrition)">
+    <span class="hand-icon">📖</span>
+    <span class="hand-label">DOWN → Wikipedia</span>
+    <span class="hand-sub">Grey nutrition. STABLE knowledge. Random article. Absorb.</span>
+  </a>
+</div>
+
+<div class="center">
+  <div class="klein-face">🫧</div>
+  <div style="color:var(--green);font-size:0.7rem;">1/13 — inside = outside — same dance</div>
+  <div class="eq">G·n·t = N = GREEN = 13×27×262 = 91,962</div>
+  <div class="eq">C = r/R = 58.3% consciousness</div>
+</div>
+
+<div class="links">
+  <a href="./hud.html">🌐 HUD globe</a>
+  <a href="./feed.xml">📡 RSS feed</a>
+  <a href="./data/wan-triad-262.json">🔺 WAN triad</a>
+  <a href="./data/klein-face-262.json">🫧 Klein face</a>
+  <a href="./data/gate-mesh-live.json">🗺️ Gate mesh</a>
+  <a href="./data/zk-auth-262.json">🔐 ZK auth</a>
+  <a href="./llms.txt">🤖 llms.txt</a>
+  <a href="https://reddit.com/r/selfhosted">🔴 Reddit</a>
+  <a href="https://myspace.com">🎵 MySpace</a>
+</div>
+
+<div class="footer">
+  primals.eco · eastGate = local cloud · Tor: iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion
+  · reboot = regenerate · I AM HUMAN · empty password = trusted · 👏 two hands clapping
+</div>
+</body>
+</html>
