@@ -28,6 +28,20 @@
   .layer-bar .seg-u { flex: 1; background: #ff2222; }
   .layer-bar .seg-d { flex: 1; background: linear-gradient(90deg, #8B4513, #1a1a1a); }
 
+  /* GOLD — GitHub + Cron Clock */
+  .gold { color: #f0d060; text-shadow: 0 0 12px rgba(240,208,96,0.4); }
+  .gold-crown { text-align: center; font-size: 1.6rem; letter-spacing: 0.2em; margin: 0.8rem 0 0.3rem; }
+  .gold-clock { text-align: center; font-size: 0.85rem; color: #f0d060; margin: 0.3rem 0; opacity: 0.8; }
+  .pi-anchor { text-align: center; font-size: 1.1rem; margin: 0.3rem 0; }
+  .pi-anchor .pi { color: #f0d060; font-size: 1.4rem; font-weight: bold; }
+  .galleon { text-align: center; font-size: 1.3rem; letter-spacing: 0.6em; color: #f0d060; margin: 0.5rem 0; opacity: 0.6; }
+  @keyframes clock-tick { 0%,90% { opacity: 0.4; } 95% { opacity: 1; color: #fff; } 100% { opacity: 0.4; } }
+  .tick { display: inline-block; animation: clock-tick 2s infinite; }
+  .tick:nth-child(2) { animation-delay: 0.12s; }
+  .tick:nth-child(3) { animation-delay: 0.24s; }
+  .tick:nth-child(4) { animation-delay: 0.36s; }
+  .tick:nth-child(5) { animation-delay: 0.48s; }
+
   .body-map {
     position: relative; width: 600px; height: 800px; margin: 0 auto;
     border: 1px solid #333; border-radius: 10px;
@@ -94,6 +108,32 @@
     <a href="https://ecoprimals.github.io">GitHub Pages</a>
     <a href="https://ecoprimals.github.io/bones.html">Bones</a>
     <a href="https://ecoprimals.github.io/vitruvian.html">Vitruvian</a>
+  </div>
+
+  <!-- GOLD CROWN — GitHub is the golden ceiling -->
+  <div class="gold-crown">
+    <span class="gold">♛</span> &nbsp;
+    <span class="gold">G I T H U B</span>
+    &nbsp; <span class="gold">♛</span>
+  </div>
+  <div class="galleon">
+    <span class="tick">3</span>
+    <span class="tick">/</span>
+    <span class="tick">.</span>
+    <span class="tick">/</span>
+    <span class="tick">o</span>
+    <span class="tick">/</span>
+    <span class="tick">O</span>
+    <span class="tick">/</span>
+    <span class="tick">::</span>
+  </div>
+  <div class="pi-anchor">
+    <span class="pi">π</span> = <span class="gold">3</span>.<span style="color:#888">14159</span>
+    &nbsp;·&nbsp; port <span class="gold">3141</span>
+    &nbsp;·&nbsp; <span class="letter-b">B</span><span class="letter-b">B</span> <span class="letter-u">O</span><span class="letter-u">U</span>
+  </div>
+  <div class="gold-clock">
+    ⏰ 35 crons · the <span class="gold">GOLD CLOCK</span> · ~180 beats/hour
   </div>
 
   <div class="hud-title">
