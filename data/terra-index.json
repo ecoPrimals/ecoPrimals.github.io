@@ -1,0 +1,493 @@
+﻿{
+    "source":  "wateringHole",
+    "layer":  "TERRA",
+    "total_directories":  42,
+    "organism":  "GAIA",
+    "top_level_files":  [
+                            {
+                                "name":  ".gitignore",
+                                "size_kb":  0
+                            },
+                            {
+                                "name":  "audit.log",
+                                "size_kb":  0.1
+                            },
+                            {
+                                "name":  "capability_registry.toml",
+                                "size_kb":  13.8
+                            },
+                            {
+                                "name":  "ecosystem_manifest.toml",
+                                "size_kb":  57.7
+                            },
+                            {
+                                "name":  "GLOSSARY.md",
+                                "size_kb":  67.6
+                            },
+                            {
+                                "name":  "HARDWARE.md",
+                                "size_kb":  26.3
+                            },
+                            {
+                                "name":  "impulse-ecobin.md",
+                                "size_kb":  1.2
+                            },
+                            {
+                                "name":  "LICENSE",
+                                "size_kb":  1.8
+                            },
+                            {
+                                "name":  "ORTHOGONAL_DIMENSIONS_REVIEW.md",
+                                "size_kb":  134.1
+                            },
+                            {
+                                "name":  "README.md",
+                                "size_kb":  28
+                            },
+                            {
+                                "name":  "STANDARDS_AND_EXPECTATIONS.md",
+                                "size_kb":  13.5
+                            },
+                            {
+                                "name":  "TOPOLOGY_MAP.toml",
+                                "size_kb":  18.1
+                            },
+                            {
+                                "name":  "wave.toml",
+                                "size_kb":  1.4
+                            },
+                            {
+                                "name":  "wave.toml.bak-178",
+                                "size_kb":  1.2
+                            }
+                        ],
+    "total_size_kb":  60022,
+    "timestamp":  "2026-11-18T14:52:06.4211037-05:00",
+    "directories":  {
+                        "tests":  {
+                                      "size_kb":  26.8,
+                                      "samples":  [
+                                                      "PHASE1_MANUAL_SORT_10_ENTITIES.md",
+                                                      "SELF_SORT_25_ORGANS.md"
+                                                  ],
+                                      "files":  2
+                                  },
+                        "evidence":  {
+                                         "size_kb":  16.9,
+                                         "samples":  "fleet_epic_fails.json",
+                                         "files":  1
+                                     },
+                        "specs":  {
+                                      "size_kb":  293.7,
+                                      "samples":  [
+                                                      "BANDWIDTH_GOVERNANCE_SPEC.md",
+                                                      "BTSP_TRANSPORT_SIGNAL_SPEC.md",
+                                                      "CARDIOVASCULAR_SYNC.md",
+                                                      "COMPOSITION_CONTRACT.md",
+                                                      "DEPENDENCY_PANDEMIC_SPEC.md",
+                                                      "DEPOT_LINEAGE_SPEC.md",
+                                                      "DISPERSAL_PATTERN.md",
+                                                      "EPITOPE_SORT_TEST_SPEC.md"
+                                                  ],
+                                      "files":  33
+                                  },
+                        "outreach":  {
+                                         "size_kb":  9.7,
+                                         "samples":  "reddit-repeater-drafts.md",
+                                         "files":  1
+                                     },
+                        "healthspring":  {
+                                             "size_kb":  19.7,
+                                             "samples":  "HEALTHSPRING_COMPOSITION_GUIDANCE.md",
+                                             "files":  1
+                                         },
+                        "provision":  {
+                                          "size_kb":  74.5,
+                                          "samples":  [
+                                                          "fp-api-caddy.caddyfile",
+                                                          "LAYER_DNS_SETUP.md",
+                                                          "provision-golgi-layer.sh",
+                                                          "provision-golgi.sh",
+                                                          "DIGITALOCEAN_ABUSE_REPORT.md",
+                                                          "HETZNER_ABUSE_REPORT.md",
+                                                          "META_DIRECT_ABUSE_REPORT.md",
+                                                          "META_FORMAL_NOTICE_EMAIL.md"
+                                                      ],
+                                          "files":  10
+                                      },
+                        "foundations":  {
+                                            "size_kb":  259.7,
+                                            "samples":  [
+                                                            "BONDING_MODEL_STANDARD.md",
+                                                            "DARK_FOREST_GLACIAL_GATE_STANDARD.md",
+                                                            "DIDERM_DOMAIN_ARCHITECTURE.md",
+                                                            "EPITOPE_SORT_INTAKE_BINGOCUBE_TRUST.md",
+                                                            "EXTERNAL_CLAIM_CONVERGENCE_STANDARD.md",
+                                                            "GAIA_RING_DISTRIBUTION_STANDARD.md",
+                                                            "K_DERM_TOPOLOGY_STANDARD.md",
+                                                            "LICENSING_AND_COPYLEFT.md"
+                                                        ],
+                                            "files":  16
+                                        },
+                        "pns-amoeba":  {
+                                           "size_kb":  16.4,
+                                           "samples":  [
+                                                           "gate-enumerate.sh",
+                                                           "northGate.json",
+                                                           "pns-amoeba.py"
+                                                       ],
+                                           "files":  3
+                                       },
+                        "exports":  {
+                                        "size_kb":  33.3,
+                                        "samples":  "braid_manifest.json",
+                                        "files":  1
+                                    },
+                        "configs":  {
+                                        "size_kb":  3.4,
+                                        "samples":  "intergate_data_access.toml",
+                                        "files":  1
+                                    },
+                        "docs":  {
+                                     "size_kb":  17,
+                                     "samples":  [
+                                                     "getting-started.md",
+                                                     "protein-structure-rust.md",
+                                                     "README.md",
+                                                     "webgpu-vs-cuda.md"
+                                                 ],
+                                     "files":  4
+                                 },
+                        "handoffs":  {
+                                         "size_kb":  674.1,
+                                         "samples":  [
+                                                         "AAR_AGENT_SCATTER_CLASSIFICATION_GAP.md",
+                                                         "AAR_ANTIDOTE_TITRATION_OBSERVATORY_WAVE167.md",
+                                                         "AAR_ARTISAN_EYES_DEEP_AUDIT_WAVE167.md",
+                                                         "AAR_BINGOCUBE_BEHAVIORAL_TRIO_WAVE167.md",
+                                                         "AAR_BINGOCUBE_NEUROMORPHIC_MEMBRANE_WAVE166G.md",
+                                                         "AAR_BLOOM_V3_COLLISION_DEPLOYMENT_WAVE165I.md",
+                                                         "AAR_BTSP_TRANSPORT_BINDING_WAVE167K.md",
+                                                         "AAR_CASCADE_RUSTDESK_KEY_WAVE173.md"
+                                                     ],
+                                         "files":  89
+                                     },
+                        "data":  {
+                                     "size_kb":  40.1,
+                                     "samples":  [
+                                                     "body-state.json",
+                                                     "ear-state.json",
+                                                     "heart-pull.json"
+                                                 ],
+                                     "files":  3
+                                 },
+                        "publications":  {
+                                             "size_kb":  14.8,
+                                             "samples":  [
+                                                             "LATTICE_QCD_CONSUMER_GPU_DATA.md",
+                                                             "README.md",
+                                                             "STICKY_NOTE_SOVEREIGN_IDENTITY.md"
+                                                         ],
+                                             "files":  3
+                                         },
+                        "lansing-flat":  {
+                                             "size_kb":  719.5,
+                                             "samples":  [
+                                                             "atom.xml",
+                                                             "index.html",
+                                                             "index.html",
+                                                             "index.html",
+                                                             "index.html",
+                                                             "index.html",
+                                                             "index.html",
+                                                             "index.html"
+                                                         ],
+                                             "files":  55
+                                         },
+                        "heads":  {
+                                      "size_kb":  193.3,
+                                      "samples":  [
+                                                      "AMOEBA_EATS_GOLGI.md",
+                                                      "ATTENTION_LOOP_WAVE244.md",
+                                                      "BIOME_OS_ATOMICS_ALIVE.md",
+                                                      "DEEP_SCAN_LIVE_PRIMALS.md",
+                                                      "DISSOLVED_VEIL_WAVE244.md",
+                                                      "eastGate.toml",
+                                                      "flockGate.toml",
+                                                      "FULL_GIS_GPU_CORTEX.md"
+                                                  ],
+                                      "files":  54
+                                  },
+                        "sunCloud":  {
+                                         "size_kb":  16.6,
+                                         "samples":  [
+                                                         "suncloud-economics-wave233.md",
+                                                         "suncloud-economics.html"
+                                                     ],
+                                         "files":  2
+                                     },
+                        "graphs":  {
+                                       "size_kb":  16.3,
+                                       "samples":  [
+                                                       "context_weave_anchored.toml",
+                                                       "impulse_post_signed.toml",
+                                                       "README.md",
+                                                       "rootpulse_commit.toml",
+                                                       "rootpulse_diff.toml",
+                                                       "rootpulse_harvest.toml",
+                                                       "waterfall_publish.toml"
+                                                   ],
+                                       "files":  7
+                                   },
+                        "fossilRecord":  {
+                                             "size_kb":  24482.6,
+                                             "samples":  [
+                                                             "README.md",
+                                                             "DESKTOP_NUCLEUS_DEPLOYMENT.md",
+                                                             "ECOBIN_ARCHITECTURE_STANDARD.md",
+                                                             "GLACIAL_SHIFT_READINESS.md",
+                                                             "PLASMIDBIN_PUSH_AUTOMATION_STANDARD.md",
+                                                             "PURE_RUST_CRYPTO_PURITY_STANDARD.md",
+                                                             "PURE_RUST_SOVEREIGN_STACK_GUIDANCE.md",
+                                                             "README.md"
+                                                         ],
+                                             "files":  1743
+                                         },
+                        "airspring":  {
+                                          "size_kb":  22.1,
+                                          "samples":  "AIRSPRING_COMPOSITION_GUIDANCE.md",
+                                          "files":  1
+                                      },
+                        "schemas":  {
+                                        "size_kb":  6.1,
+                                        "samples":  "data_manifest.toml",
+                                        "files":  1
+                                    },
+                        "vault":  {
+                                      "size_kb":  4.6,
+                                      "samples":  [
+                                                      "cred_bundle.tar.gpg",
+                                                      "README.md",
+                                                      "westgate_api_keys.json"
+                                                  ],
+                                      "files":  3
+                                  },
+                        "birdsong":  {
+                                         "size_kb":  52.6,
+                                         "samples":  [
+                                                         "BIRDSONG_PROTOCOL.md",
+                                                         "DARK_FOREST_BEACON_GENETICS_STANDARD.md",
+                                                         "SONGBIRD_TLS_TOWER_ATOMIC_INTEGRATION_GUIDE.md"
+                                                     ],
+                                         "files":  3
+                                     },
+                        "protocols":  {
+                                          "size_kb":  154.6,
+                                          "samples":  [
+                                                          "BTSP_PROTOCOL_STANDARD.md",
+                                                          "CADDY_DEPLOY_PROTOCOL.md",
+                                                          "CAPABILITY_BASED_DISCOVERY_STANDARD.md",
+                                                          "CAPABILITY_DOMAIN_REGISTRY.md",
+                                                          "CAPABILITY_WIRE_STANDARD.md",
+                                                          "CONTEXT_BRAID_STANDARD.md",
+                                                          "ECOSYSTEM_COMMUNICATION_STANDARD.md",
+                                                          "IMPULSE_POTENTIAL_STANDARD.md"
+                                                      ],
+                                          "files":  12
+                                      },
+                        "context":  {
+                                        "size_kb":  0,
+                                        "samples":  [
+                                                        ".gitkeep",
+                                                        ".gitkeep"
+                                                    ],
+                                        "files":  2
+                                    },
+                        "manifests":  {
+                                          "size_kb":  4.9,
+                                          "samples":  [
+                                                          "alphafold_proteomes_v1_v6.toml",
+                                                          "alphafold_structures_v6.toml",
+                                                          "metered_queue.toml"
+                                                      ],
+                                          "files":  3
+                                      },
+                        "tools":  {
+                                      "size_kb":  28.4,
+                                      "samples":  [
+                                                      "membrane-monitor.sh",
+                                                      "overwatch.sh"
+                                                  ],
+                                      "files":  2
+                                  },
+                        "operations":  {
+                                           "size_kb":  142.8,
+                                           "samples":  [
+                                                           "DEPLOYMENT_VALIDATION_STANDARD.md",
+                                                           "DISCOVERED_BY_STANDARD.md",
+                                                           "DISTRIBUTED_COVALENT_DEPLOYMENT.md",
+                                                           "GATEHOUSE_DARKFOREST_STANDARD.md",
+                                                           "GATE_NUCLEUS_SYSTEMD_STANDARD.md",
+                                                           "GATE_SETUP_STANDARD.md",
+                                                           "GATE_SPRING_OWNERSHIP.md",
+                                                           "GATE_TEAM_COORDINATION_MATRIX.md"
+                                                       ],
+                                           "files":  15
+                                       },
+                        "aars":  {
+                                     "size_kb":  804.6,
+                                     "samples":  [
+                                                     "ACTIVE_DEFENSE_FORGE_LOCKDOWN_WAVE165_AAR.md",
+                                                     "DEPLOYMENT_FAILURE_TAXONOMY_WAVE161_AAR.md",
+                                                     "FORGEJO_DAG_POINTER_EVOLUTION_WAVE161_AAR.md",
+                                                     "GOLGI_SPOREGATE_FOSSILIZATION_REDUNDANCY_161_AAR.md",
+                                                     "GRAPH_REBALANCE_OCT13_AAR.md",
+                                                     "GRAPH_VIZ_REVIEW_WAVE175_AAR.md",
+                                                     "INTERSTITIAL_FILL_AAR.md",
+                                                     "MEMBRANE_AWARENESS_EXECUTION_WAVE175_AAR.md"
+                                                 ],
+                                     "files":  120
+                                 },
+                        "btsp":  {
+                                     "size_kb":  9.7,
+                                     "samples":  "BEARDOG_TECHNICAL_STACK.md",
+                                     "files":  1
+                                 },
+                        "clutch-flat":  {
+                                            "size_kb":  510.6,
+                                            "samples":  [
+                                                            "elasticlunr.min.js",
+                                                            "index.html",
+                                                            "llms.txt",
+                                                            "search_index.en.js",
+                                                            "index.html",
+                                                            "index.html",
+                                                            "index.html",
+                                                            "index.html"
+                                                        ],
+                                            "files":  13
+                                        },
+                        "petaltongue":  {
+                                            "size_kb":  100,
+                                            "samples":  [
+                                                            "PETALTONGUE_NEEDS_FROM_ECOSYSTEM.md",
+                                                            "PETALTONGUE_SPRING_SCIENCE_MAP.md",
+                                                            "README.md",
+                                                            "SCENE_FORMAT_REFERENCE.md",
+                                                            "SENSORY_CAPABILITY_MATRIX.md",
+                                                            "SPOREPRINT_EVOLUTION_ROADMAP.md",
+                                                            "VISUALIZATION_INTEGRATION_GUIDE.md"
+                                                        ],
+                                            "files":  7
+                                        },
+                        "impulses":  {
+                                         "size_kb":  165.2,
+                                         "samples":  [
+                                                         "2026-10-16T14-20_eastGate__audit-response-wave178.toml",
+                                                         "2026-11-18T12-15_eastGate__wave260-water-lock-open.toml",
+                                                         ".gitkeep",
+                                                         "2026-10-19T21-30_sporeGate__diverge-wateringHole.toml",
+                                                         "2026-10-21T00-26_eastGate__ecosystem-fertilizer.toml",
+                                                         "2026-10-21T01-14_eastGate__skunky-violation-intake.toml",
+                                                         "2026-10-21T13-35_northGate__wave195-anygate-guidance.toml",
+                                                         "2026-10-21T17-13_eastGate__dns-sovereign-switch.toml"
+                                                     ],
+                                         "files":  74
+                                     },
+                        "compute-sharing":  {
+                                                "size_kb":  7465,
+                                                "samples":  [
+                                                                "checksums.toml",
+                                                                "loamspine",
+                                                                "skunkbat"
+                                                            ],
+                                                "files":  3
+                                            },
+                        "scripts":  {
+                                        "size_kb":  38.1,
+                                        "samples":  [
+                                                        "data_blockers.md",
+                                                        "data_federation_schedule.md",
+                                                        "overwatch-temporal.sh",
+                                                        "staging_experiment_results.json"
+                                                    ],
+                                        "files":  4
+                                    },
+                        "compositions":  {
+                                             "size_kb":  124.7,
+                                             "samples":  [
+                                                             "COMPOSITION_HEALTH_STANDARD.md",
+                                                             "COMPOSITION_ROUTING_STANDARD.md",
+                                                             "COMPOSITION_TICK_MODEL_STANDARD.md",
+                                                             "CROSS_SPRING_COORDINATION_STANDARD.md",
+                                                             "MEMBRANE_CHANNEL_ARCHITECTURE.md",
+                                                             "MEMBRANE_COMPOSITION_STATUS.md",
+                                                             "PRIMAL_REGISTRY.md"
+                                                         ],
+                                             "files":  7
+                                         },
+                        "receipts":  {
+                                         "size_kb":  0.5,
+                                         "samples":  "receipt-key-generate-20261007-161539-430.json",
+                                         "files":  1
+                                     },
+                        "hooks":  {
+                                      "size_kb":  7,
+                                      "samples":  [
+                                                      "context-braid-workflow.rule.md",
+                                                      "hooks.json",
+                                                      "README.md",
+                                                      "README.md"
+                                                  ],
+                                      "files":  4
+                                  },
+                        "experiments":  {
+                                            "size_kb":  133,
+                                            "samples":  [
+                                                            "experiment_audit_1786710285.json",
+                                                            "experiment_break_1786710253.json",
+                                                            "experiment_compose_1786711067.json",
+                                                            "experiment_compress_1786710336.json",
+                                                            "experiment_dehydrate_1786711035.json",
+                                                            "experiment_encrypt_1786711027.json",
+                                                            "experiment_export_1786710311.json",
+                                                            "experiment_falsify_1786710276.json"
+                                                        ],
+                                            "files":  20
+                                        },
+                        "tuebor-flat":  {
+                                            "size_kb":  22828.3,
+                                            "samples":  [
+                                                            "atom.xml",
+                                                            "index.html",
+                                                            "search_index.en.js",
+                                                            "index.html",
+                                                            "main.css",
+                                                            "index.html",
+                                                            "index.html",
+                                                            "index.html"
+                                                        ],
+                                            "files":  16
+                                        },
+                        "recipes":  {
+                                        "size_kb":  5.4,
+                                        "samples":  "classics-hologram.md",
+                                        "files":  1
+                                    },
+                        "sensorium":  {
+                                          "size_kb":  120.6,
+                                          "samples":  [
+                                                          "ambience.sh",
+                                                          "breathe-dance.sh",
+                                                          "ear.sh",
+                                                          "eye.sh",
+                                                          "gaia-bashrc",
+                                                          "gaia-boot.sh",
+                                                          "gaia-daemon.sh",
+                                                          "gaia-explorer.py"
+                                                      ],
+                                          "files":  19
+                                      }
+                    },
+    "total_files":  2375
+}
