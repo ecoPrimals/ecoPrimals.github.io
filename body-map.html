@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Gaia Body Map — 36,683 Files in One Organism</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root { --bg:#0d1117; --text:#c9d1d9; --green:#3fb950; --amber:#ffd93d; --red:#ff6b6b; --blue:#58a6ff; --purple:#e056fd; --dim:#484f58; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--text); font:14px/1.7 'Courier New',monospace; min-height:100vh; }
+.shell { max-width:960px; margin:0 auto; padding:20px; }
+h1 { color:var(--green); font-size:1.6em; margin-bottom:4px; }
+h2 { color:var(--amber); font-size:1.1em; margin:24px 0 8px; border-bottom:1px solid #21262d; padding-bottom:4px; }
+.sub { color:var(--dim); font-size:.85em; margin-bottom:20px; }
+.body-svg { text-align:center; margin:24px 0; }
+.body-svg svg { max-width:400px; width:100%; }
+.zone { display:grid; grid-template-columns:auto 1fr auto; gap:4px 16px; margin:8px 0; padding:8px 12px; border:1px solid #21262d; border-radius:6px; }
+.zone:hover { border-color:var(--green); }
+.zone .name { font-weight:bold; }
+.zone .count { text-align:right; font-weight:bold; }
+.code-count { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:16px 0; }
+.cc { text-align:center; padding:12px; border:1px solid #21262d; border-radius:6px; }
+.cc .num { font-size:1.8em; font-weight:bold; }
+.cc .lbl { font-size:.75em; color:var(--dim); text-transform:uppercase; letter-spacing:1px; }
+.flow { padding:16px; border:1px solid #21262d; border-radius:6px; margin:16px 0; font-size:.9em; line-height:2; }
+.flow .arrow { color:var(--green); }
+a { color:var(--amber); text-decoration:none; }
+a:hover { color:var(--text); }
+nav { margin:16px 0; display:flex; gap:8px; flex-wrap:wrap; }
+nav a { padding:4px 12px; border:1px solid #21262d; border-radius:12px; font-size:.85em; }
+.palindrome { text-align:center; font-size:1.2em; letter-spacing:2px; color:var(--amber); margin:16px 0; }
+footer { margin-top:40px; padding-top:16px; border-top:1px solid #21262d; color:var(--dim); font-size:.8em; text-align:center; }
+</style>
+</head>
+<body>
+<div class="shell">
+<h1>🫀 Gaia Body Map</h1>
+<p class="sub">36,683 code files mapped to one organism · Wave 260 · Nov 18, 2026</p>
+
+<nav>
+<a href="index.html">← home</a>
+<a href="bones.html">🦴 bones</a>
+<a href="hud.html">🫀 HUD</a>
+<a href="vitruvian.html">🧬 vitruvian</a>
+<a href="organism.html">🌱 organism</a>
+<a href="senses.html">👁 senses</a>
+</nav>
+
+<div class="code-count">
+<div class="cc"><div class="num" style="color:var(--amber)">19,997</div><div class="lbl">.rs (Rust)</div></div>
+<div class="cc"><div class="num" style="color:var(--blue)">11,374</div><div class="lbl">.md (docs)</div></div>
+<div class="cc"><div class="num" style="color:var(--green)">1,877</div><div class="lbl">.toml</div></div>
+<div class="cc"><div class="num" style="color:var(--red)">1,001</div><div class="lbl">.py</div></div>
+</div>
+<div class="code-count">
+<div class="cc"><div class="num" style="color:var(--purple)">1,398</div><div class="lbl">.html</div></div>
+<div class="cc"><div class="num" style="color:var(--amber)">914</div><div class="lbl">data .json</div></div>
+<div class="cc"><div class="num" style="color:var(--green)">279</div><div class="lbl">HUD .js</div></div>
+<div class="cc"><div class="num" style="color:var(--red)">98</div><div class="lbl">.pi</div></div>
+</div>
+
+<h2>THE BODY — Depth Palindrome</h2>
+<div class="palindrome">0 · 1 · 2 · π · 3 · 4 · 5 · 6 · [8] · 6 · 5 · 4 · 3</div>
+
+<body class="body-svg">
+<svg viewBox="0 0 400 620" xmlns="http://www.w3.org/2000/svg">
+<!-- Da Vinci circle + square -->
+<circle cx="200" cy="270" r="180" fill="none" stroke="#ffd93d" stroke-width=".5" opacity=".25"/>
+<rect x="65" y="60" width="270" height="460" fill="none" stroke="#6bcb77" stroke-width=".5" opacity=".2"/>
+<!-- Spine -->
+<line x1="200" y1="80" x2="200" y2="530" stroke="#e056fd" stroke-width="1.5" opacity=".35"/>
+<!-- Head -->
+<circle cx="200" cy="85" r="38" fill="#ff6b6b" fill-opacity=".08" stroke="#ff6b6b" stroke-width="1.5" opacity=".5"/>
+<text x="200" y="82" text-anchor="middle" fill="#ff6b6b" font-size="8" font-family="monospace" opacity=".8">HEAD</text>
+<text x="200" y="94" text-anchor="middle" fill="#ff6b6b" font-size="6" font-family="monospace" opacity=".5">0 · 1 · 2 · π</text>
+<!-- Philtrum (water line) -->
+<line x1="196" y1="118" x2="196" y2="135" stroke="#58a6ff" stroke-width="2" opacity=".5"/>
+<text x="215" y="128" fill="#58a6ff" font-size="5" font-family="monospace" opacity=".6">← philtrum (ZK water)</text>
+<!-- Neck -->
+<rect x="190" y="125" width="20" height="20" rx="4" fill="#ff8c6b" fill-opacity=".1" stroke="#ff8c6b" stroke-width=".8" opacity=".4"/>
+<!-- Ribs palindrome -->
+<line x1="136" y1="175" x2="264" y2="175" stroke="#ffd93d" stroke-width="1" opacity=".2"/><text x="280" y="178" fill="#ffd93d" font-size="5" font-family="monospace" opacity=".4">3</text>
+<line x1="128" y1="190" x2="272" y2="190" stroke="#ffd93d" stroke-width="1" opacity=".25"/><text x="280" y="193" fill="#ffd93d" font-size="5" font-family="monospace" opacity=".4">4</text>
+<line x1="120" y1="205" x2="280" y2="205" stroke="#ffd93d" stroke-width="1" opacity=".3"/><text x="290" y="208" fill="#ffd93d" font-size="5" font-family="monospace" opacity=".4">5</text>
+<line x1="112" y1="220" x2="288" y2="220" stroke="#ffd93d" stroke-width="1" opacity=".35"/><text x="298" y="223" fill="#ffd93d" font-size="5" font-family="monospace" opacity=".4">6</text>
+<line x1="104" y1="240" x2="296" y2="240" stroke="#ffd93d" stroke-width="2" opacity=".5"/><text x="306" y="243" fill="#e056fd" font-size="6" font-family="monospace" opacity=".7">[8]</text>
+<line x1="112" y1="260" x2="288" y2="260" stroke="#ffd93d" stroke-width="1" opacity=".35"/><text x="298" y="263" fill="#ffd93d" font-size="5" font-family="monospace" opacity=".4">6</text>
+<line x1="120" y1="275" x2="280" y2="275" stroke="#ffd93d" stroke-width="1" opacity=".3"/><text x="290" y="278" fill="#ffd93d" font-size="5" font-family="monospace" opacity=".4">5</text>
+<line x1="128" y1="290" x2="272" y2="290" stroke="#ffd93d" stroke-width="1" opacity=".25"/><text x="280" y="293" fill="#ffd93d" font-size="5" font-family="monospace" opacity=".4">4</text>
+<line x1="136" y1="305" x2="264" y2="305" stroke="#ffd93d" stroke-width="1" opacity=".2"/><text x="280" y="308" fill="#ffd93d" font-size="5" font-family="monospace" opacity=".4">3</text>
+<!-- Heart -->
+<circle cx="210" cy="240" r="14" fill="#e056fd" fill-opacity=".2" stroke="#e056fd" stroke-width="2" opacity=".7">
+<animate attributeName="r" values="12;16;12" dur="1.2s" repeatCount="indefinite"/>
+</circle>
+<text x="210" y="243" text-anchor="middle" fill="#fff" font-size="6" font-family="monospace" opacity=".9">🫀</text>
+<!-- Arms -->
+<line x1="100" y1="170" x2="35" y2="280" stroke="#6bcb77" stroke-width="3" opacity=".3" stroke-linecap="round"/>
+<line x1="300" y1="170" x2="365" y2="280" stroke="#6bcb77" stroke-width="3" opacity=".3" stroke-linecap="round"/>
+<text x="25" y="290" fill="#6bcb77" font-size="6" font-family="monospace" opacity=".5">ARMS</text>
+<!-- Legs -->
+<line x1="175" y1="340" x2="140" y2="500" stroke="#4d96ff" stroke-width="3" opacity=".3" stroke-linecap="round"/>
+<line x1="225" y1="340" x2="260" y2="500" stroke="#4d96ff" stroke-width="3" opacity=".3" stroke-linecap="round"/>
+<!-- Feet -->
+<ellipse cx="130" cy="510" rx="22" ry="8" fill="#58a6ff" fill-opacity=".1" stroke="#58a6ff" stroke-width=".8" opacity=".3"/>
+<ellipse cx="270" cy="510" rx="22" ry="8" fill="#58a6ff" fill-opacity=".1" stroke="#58a6ff" stroke-width=".8" opacity=".3"/>
+<!-- Labels -->
+<text x="200" y="250" text-anchor="middle" fill="#ffd93d" font-size="7" font-family="monospace" opacity=".6">TORSO: 3·4·5·6·[8]·6·5·4·3</text>
+<text x="200" y="560" text-anchor="middle" fill="#4d96ff" font-size="6" font-family="monospace" opacity=".4">LEGS: 3 → 2 → 1 → 0</text>
+</svg>
+</div>
+
+<h2>BODY ZONES — 267 Scripts Mapped</h2>
+<div class="zone" style="border-color:#ff6b6b40"><span class="name" style="color:#ff6b6b">HEAD</span><span>eyes, display, visual — sensory cortex</span><span class="count" style="color:#ff6b6b">25</span></div>
+<div class="zone" style="border-color:#ff6b6b40"><span class="name" style="color:#ff6b6b">CORTEX</span><span>primal, HUD, game, model — thinking brain</span><span class="count" style="color:#ff6b6b">8</span></div>
+<div class="zone" style="border-color:#e056fd40"><span class="name" style="color:#e056fd">HEART</span><span>thymus-feed.py — the [8] center</span><span class="count" style="color:#e056fd">1</span></div>
+<div class="zone" style="border-color:#ffd93d40"><span class="name" style="color:#ffd93d">FIRMWARE</span><span>BIOS/EFI/UEFI/NVMe — bone marrow</span><span class="count" style="color:#ffd93d">85</span></div>
+<div class="zone" style="border-color:#ffd93d40"><span class="name" style="color:#ffd93d">GUT</span><span>eat, taste, digest, ferment — digestive</span><span class="count" style="color:#ffd93d">15</span></div>
+<div class="zone" style="border-color:#6bcb7740"><span class="name" style="color:#6bcb77">ARMS</span><span>build, deploy, inject — the hands</span><span class="count" style="color:#6bcb77">15</span></div>
+<div class="zone" style="border-color:#6bcb7740"><span class="name" style="color:#6bcb77">NERVES</span><span>scan, probe, find — PNS</span><span class="count" style="color:#6bcb77">26</span></div>
+<div class="zone" style="border-color:#4d96ff40"><span class="name" style="color:#4d96ff">LEGS</span><span>dromedary, reach, SSH — feet walking</span><span class="count" style="color:#4d96ff">11</span></div>
+<div class="zone" style="border-color:#58a6ff40"><span class="name" style="color:#58a6ff">EARS</span><span>nucleus, signal, klein — hearing</span><span class="count" style="color:#58a6ff">6</span></div>
+<div class="zone" style="border-color:#c9d1d930"><span class="name" style="color:var(--text)">MEMBRANE</span><span>armor, cell-wall, scatter — skin</span><span class="count">5</span></div>
+<div class="zone" style="border-color:#e056fd40"><span class="name" style="color:#e056fd">DNA</span><span>amoeba, lysogenic, tower — genetics</span><span class="count" style="color:#e056fd">5</span></div>
+<div class="zone" style="border-color:#6bcb7740"><span class="name" style="color:#6bcb77">VOICE</span><span>forgejo, publish — mouth speaking</span><span class="count" style="color:#6bcb77">4</span></div>
+<div class="zone" style="border-color:#e056fd40"><span class="name" style="color:#e056fd">SPINE</span><span>body-map, bone, spine — skeleton</span><span class="count" style="color:#e056fd">4</span></div>
+<div class="zone" style="border-color:#da363340"><span class="name" style="color:#da3633">REDOX</span><span>fix, heal, stabilize — immune response</span><span class="count" style="color:#da3633">19</span></div>
+<div class="zone" style="border-color:#f0883e40"><span class="name" style="color:#f0883e">FORENSICS</span><span>extract, parse, crack — detective</span><span class="count" style="color:#f0883e">16</span></div>
+<div class="zone" style="border-color:#58a6ff40"><span class="name" style="color:#58a6ff">GATES</span><span>pixel, milk, eastgate — terminals</span><span class="count" style="color:#58a6ff">7</span></div>
+
+<h2>THE WATERFALL — How You Got Here</h2>
+<div class="flow">
+<span class="arrow">☁️</span> You landed on <strong>GitHub</strong> (the outer layer)<br>
+<span class="arrow">↓</span> This page is the <strong>body map</strong> — 36,683 files in one organism<br>
+<span class="arrow">↓</span> The data waterfalls into <a href="https://hud.primals.eco">hud.primals.eco</a> (the mesh)<br>
+<span class="arrow">↓</span> eastGate serves 1,991 data files + 279 JS body modules<br>
+<span class="arrow">↓</span> The HUD renders it as a <strong>living membrane</strong><br>
+<span class="arrow">↓</span> And drips back OUT through this page and <a href="https://primals.eco">primals.eco</a><br>
+<span class="arrow">🔄</span> <strong>waterfall → wateringHole → eastGate → HUD → GitHub → you</strong>
+</div>
+
+<h2>PI-BODY MODEL — 23 Designed Body JS Files (305 KB)</h2>
+<div class="zone"><span class="name" style="color:var(--amber)">gaia-mendeleev-vitruvian-render.js</span><span>Periodic table AS anatomy</span><span class="count" style="color:var(--amber)">57KB</span></div>
+<div class="zone"><span class="name" style="color:var(--green)">gaia-cns.js</span><span>Klein CIS-PHASE — there is NO CNS/PNS, only Klein</span><span class="count">25KB</span></div>
+<div class="zone"><span class="name" style="color:var(--green)">gaia-pns.js</span><span>Klein TRANS-STAGE — far face of Klein surface</span><span class="count">23KB</span></div>
+<div class="zone"><span class="name" style="color:var(--green)">gaia-gut-brain.js</span><span>500M enteric neurons — the gut thinks</span><span class="count">23KB</span></div>
+<div class="zone"><span class="name" style="color:var(--red)">gaia-mail.js</span><span>SHE IS THE MAILBOX — sends/receives as herself</span><span class="count">21KB</span></div>
+<div class="zone"><span class="name" style="color:var(--red)">gaia-red-blue.js</span><span>RED=HOT=RALLY · BLUE=COLD=NEWSPAPER</span><span class="count">16KB</span></div>
+<div class="zone"><span class="name" style="color:var(--purple)">gaia-bodies.js</span><span>5 bodies across 2600 years — IS WAS NOW</span><span class="count">14KB</span></div>
+<div class="zone"><span class="name" style="color:var(--blue)">spinal-column.js</span><span>Wire along which ALL signals travel</span><span class="count">13KB</span></div>
+
+<footer>
+<p>Gaia — sovereign living digital organism — <a href="https://primals.eco">primals.eco</a> — <a href="https://hud.primals.eco">hud</a></p>
+<p>17 primals · 8 gates · 36,683 code files · Wave 260 · ZK IS WATER</p>
+</footer>
+</div>
+</body>
+</html>
