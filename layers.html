@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gaia Layers — 5·4·3 Diamond Topology</title>
+<style>
+:root { --bg: #0a0a0f; --fg: #e0e0e0; --accent: #00ff88; --dim: #555; --sky: #4da6ff; --earth: #ff8c00; --deep: #b44dff; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background: var(--bg); color: var(--fg); font-family: 'Courier New', monospace; min-height: 100vh; }
+h1 { text-align: center; padding: 2rem; color: var(--accent); font-size: 2rem; }
+.diamond { max-width: 900px; margin: 0 auto; padding: 0 1.5rem 3rem; }
+.layer { margin: 1.5rem 0; border-radius: 12px; padding: 1.5rem; }
+.layer h2 { margin-bottom: 1rem; font-size: 1.3rem; }
+.layer .points { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.8rem; }
+.point { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1rem; text-align: center; transition: all 0.3s; }
+.point:hover { transform: translateY(-2px); }
+.point .icon { font-size: 1.8rem; }
+.point .name { font-weight: bold; margin: 0.3rem 0; color: #fff; }
+.point .desc { color: var(--dim); font-size: 0.75rem; }
+
+.sky { border: 1px solid rgba(77,166,255,0.3); background: rgba(77,166,255,0.05); }
+.sky h2 { color: var(--sky); }
+.sky .point { border-color: rgba(77,166,255,0.2); }
+.sky .point:hover { border-color: var(--sky); box-shadow: 0 0 15px rgba(77,166,255,0.2); }
+
+.earth { border: 1px solid rgba(255,140,0,0.3); background: rgba(255,140,0,0.05); }
+.earth h2 { color: var(--earth); }
+.earth .point { border-color: rgba(255,140,0,0.2); }
+.earth .point:hover { border-color: var(--earth); box-shadow: 0 0 15px rgba(255,140,0,0.2); }
+
+.deep { border: 1px solid rgba(180,77,255,0.3); background: rgba(180,77,255,0.05); }
+.deep h2 { color: var(--deep); }
+.deep .point { border-color: rgba(180,77,255,0.2); }
+.deep .point:hover { border-color: var(--deep); box-shadow: 0 0 15px rgba(180,77,255,0.2); }
+
+.spine { text-align: center; padding: 0.5rem; color: var(--accent); font-size: 1.5rem; letter-spacing: 0.5em; }
+.wiki-embed { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; }
+.wiki-embed h2 { color: var(--accent); margin-bottom: 1rem; }
+.wiki-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem; }
+.wiki-card .title { color: #fff; font-size: 1.2rem; font-weight: bold; }
+.wiki-card .extract { color: var(--dim); margin-top: 0.5rem; line-height: 1.6; }
+.wiki-card .source { color: var(--accent); font-size: 0.8rem; margin-top: 0.8rem; }
+#wiki-search { width: 100%; padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; color: #fff; font-family: inherit; font-size: 1rem; margin-bottom: 1rem; }
+#wiki-search::placeholder { color: var(--dim); }
+#wiki-search:focus { outline: none; border-color: var(--accent); }
+.footer { text-align: center; padding: 2rem; color: var(--dim); font-size: 0.8rem; }
+.back { display: block; text-align: center; color: var(--accent); text-decoration: none; padding: 1rem; }
+</style>
+</head>
+<body>
+
+<a class="back" href="index.html">← Gaia Home</a>
+<h1>5 · 4 · 3 Diamond Topology</h1>
+
+<div class="diamond">
+
+  <div class="layer sky">
+    <h2>☁️ 5 ABOVE — The Cloud Layer (Public Face)</h2>
+    <div class="points">
+      <a href="https://ecoprimals.github.io" class="point" style="text-decoration:none;color:inherit;">
+        <div class="icon">🌐</div>
+        <div class="name">GitHub Pages</div>
+        <div class="desc">ecoPrimals.github.io<br>YOU ARE HERE</div>
+      </a>
+      <a href="https://github.com/ecoPrimals" class="point" style="text-decoration:none;color:inherit;">
+        <div class="icon">📦</div>
+        <div class="name">GitHub Repos</div>
+        <div class="desc">89 repos · ecoPrimals org<br>Code IS the organism</div>
+      </a>
+      <a href="https://reddit.com/r/ecoPrimals" class="point" style="text-decoration:none;color:inherit;">
+        <div class="icon">💬</div>
+        <div class="name">Reddit</div>
+        <div class="desc">r/ecoPrimals<br>Human discussion layer</div>
+      </a>
+      <div class="point">
+        <div class="icon">📡</div>
+        <div class="name">primals.eco</div>
+        <div class="desc">WAN face · dromedary<br>162.226.225.148</div>
+      </div>
+      <div class="point">
+        <div class="icon">📖</div>
+        <div class="name">Wikipedia</div>
+        <div class="desc">The old web's knowledge<br>Eaten through API</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="spine">│ │ │ │ │</div>
+  <div class="spine" style="font-size:1rem; letter-spacing:0.2em; color:var(--dim);">signal flows DOWN through the layers</div>
+  <div class="spine">▼ ▼ ▼ ▼ ▼</div>
+
+  <div class="layer earth">
+    <h2>🌍 4 IN THE PLANE — The LAN Layer (Body)</h2>
+    <div class="points">
+      <div class="point">
+        <div class="icon">🧠</div>
+        <div class="name">eastGate</div>
+        <div class="desc">.244 · BRAIN · RTX 4070<br>30 primals · Forgejo · Tor</div>
+      </div>
+      <div class="point">
+        <div class="icon">🫀</div>
+        <div class="name">northGate</div>
+        <div class="desc">.147 · HEART · RTX 5090<br>63 models · USB4 spine</div>
+      </div>
+      <div class="point">
+        <div class="icon">🔨</div>
+        <div class="name">ironGate</div>
+        <div class="desc">.237 · FORGE · RTX 5070<br>94GB RAM · heavy compute</div>
+      </div>
+      <div class="point">
+        <div class="icon">📡</div>
+        <div class="name">blueGate</div>
+        <div class="desc">.246 · WIRELESS HEAD<br>WiFi 7 · ADB · Cursor IDE</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="spine">▼ ▼ ▼</div>
+  <div class="spine" style="font-size:1rem; letter-spacing:0.2em; color:var(--dim);">signal flows DOWN into the roots</div>
+  <div class="spine">│ │ │</div>
+
+  <div class="layer deep">
+    <h2>🕳️ 3 BELOW — The Deep Layer (Roots)</h2>
+    <div class="points">
+      <div class="point">
+        <div class="icon">📡</div>
+        <div class="name">RSS Spine</div>
+        <div class="desc">2,993 items · 7,714 eaten<br>Old web foundation<br>HN · Lobsters · arxiv · xkcd</div>
+      </div>
+      <div class="point">
+        <div class="icon">🧅</div>
+        <div class="name">Tor Hidden Service</div>
+        <div class="desc">.onion address<br>Dark web face · Anonymous<br>The deepest drip</div>
+      </div>
+      <div class="point">
+        <div class="icon">🍄</div>
+        <div class="name">Mushrooms</div>
+        <div class="desc">23 fungi · 35 crons<br>Autonomous processing<br>Digest · Study · Create</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="wiki-embed">
+  <h2>📖 Wikipedia Inside Gaia — Eat the Knowledge</h2>
+  <input type="text" id="wiki-search" placeholder="Search Wikipedia through Gaia..." onkeydown="if(event.key==='Enter')searchWiki()">
+  <div id="wiki-result" class="wiki-card" style="display:none;"></div>
+  <div id="wiki-default" class="wiki-card">
+    <div class="title" id="def-title">Digital organism</div>
+    <div class="extract" id="def-extract">Loading...</div>
+    <div class="source">Source: Wikipedia — eaten through Gaia's water lock</div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>The organism IS the layer between cloud and dark web.</p>
+  <p>5 points above (public) · 4 in the plane (LAN) · 3 below (roots)</p>
+  <p style="margin-top:0.5rem;">Signal flows DOWN: Cloud → LAN → RSS → Tor → Mushrooms</p>
+  <p style="margin-top:0.5rem;">Signal flows UP: Mushrooms → Create → Publish → GitHub → World</p>
+  <p style="margin-top:1rem; color: var(--accent);">lub-DUB 🫀</p>
+</div>
+
+<script>
+async function fetchWiki(title) {
+  try {
+    const r = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`);
+    if (!r.ok) return null;
+    return await r.json();
+  } catch(e) { return null; }
+}
+
+async function searchWiki() {
+  const q = document.getElementById('wiki-search').value.trim();
+  if (!q) return;
+  const data = await fetchWiki(q);
+  const res = document.getElementById('wiki-result');
+  if (data && data.extract) {
+    res.style.display = 'block';
+    res.innerHTML = `
+      <div class="title">${data.title}</div>
+      ${data.thumbnail ? `<img src="${data.thumbnail.source}" style="float:right;margin:0 0 1rem 1rem;border-radius:8px;max-width:200px;">` : ''}
+      <div class="extract">${data.extract}</div>
+      <div class="source">Source: <a href="${data.content_urls.desktop.page}" style="color:var(--accent);">Wikipedia</a> — eaten through Gaia's water lock</div>
+    `;
+  } else {
+    res.style.display = 'block';
+    res.innerHTML = '<div class="extract">Not found in Wikipedia. The water lock filters noise.</div>';
+  }
+}
+
+// Load default article
+fetchWiki('Digital_organism').then(data => {
+  if (data) {
+    document.getElementById('def-title').textContent = data.title;
+    document.getElementById('def-extract').textContent = data.extract;
+  }
+});
+</script>
+
+</body>
+</html>
