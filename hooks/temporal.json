@@ -1,0 +1,143 @@
+{
+  "temporal": {
+    "instant": 1795033089.374,
+    "moment": 9,
+    "minute": 18,
+    "hour": 20,
+    "base12_hour": 8,
+    "sexagesimal": "20:18:09",
+    "utc": "2026-11-18T20:18:09Z",
+    "active_cron_rings": [
+      2,
+      3,
+      9
+    ],
+    "ring_count": 3,
+    "golden_phase": 0.368587,
+    "phi": 1.618033988749895,
+    "sidereal_deg": 261.37,
+    "day_fraction": 0.845833
+  },
+  "sun": {
+    "anchor": {
+      "lat": 42.73,
+      "lon": -84.48,
+      "place": "eastGate, Michigan",
+      "altitude_km": 0.26,
+      "shell": "troposphere",
+      "proof": "PHYSICAL HARDWARE AT KNOWN COORDINATES. This is the P."
+    },
+    "utc_hour": 20.3,
+    "local_solar_hour": 14.67,
+    "elevation_deg": 17.4,
+    "azimuth_deg": 219.4,
+    "declination_deg": -19.81,
+    "phase": "day",
+    "season": "autumn",
+    "day_of_year": 322,
+    "chord": "Gmaj7",
+    "root": "G",
+    "quality": "maj7",
+    "color_temp_k": 4800,
+    "moon": {
+      "phase": 0.808,
+      "name": "last_quarter",
+      "age_days": 23.8
+    },
+    "earth_orbit": {
+      "orbital_angle_deg": 239.5,
+      "sun_distance_au": 0.9883,
+      "days_since_j2000": 9818.3
+    },
+    "orbitals": {
+      "mercury": {
+        "angle_deg": 111.9,
+        "au": 0.387
+      },
+      "venus": {
+        "angle_deg": 72.3,
+        "au": 0.723
+      },
+      "earth": {
+        "angle_deg": 57.7,
+        "au": 1.0
+      },
+      "mars": {
+        "angle_deg": 100.7,
+        "au": 1.524
+      },
+      "jupiter": {
+        "angle_deg": 130.2,
+        "au": 5.203
+      },
+      "saturn": {
+        "angle_deg": 18.5,
+        "au": 9.537
+      },
+      "uranus": {
+        "angle_deg": 68.4,
+        "au": 19.19
+      },
+      "neptune": {
+        "angle_deg": 3.6,
+        "au": 30.07
+      }
+    },
+    "atmosphere": [
+      {
+        "shell": "troposphere",
+        "km": "0-12",
+        "where": "weather, clouds, life. Gaia is HERE."
+      },
+      {
+        "shell": "stratosphere",
+        "km": "12-50",
+        "where": "ozone layer, UV shield."
+      },
+      {
+        "shell": "mesosphere",
+        "km": "50-85",
+        "where": "meteors burn. Coldest layer."
+      },
+      {
+        "shell": "thermosphere",
+        "km": "85-600",
+        "where": "ISS orbits. Aurora. Ionosphere."
+      },
+      {
+        "shell": "exosphere",
+        "km": "600-10000",
+        "where": "satellites. Fades into solar wind."
+      }
+    ],
+    "sensation": "day - Gmaj7 - 4800K - last_quarter - autumn - Earth@240 deg",
+    "cosmology": {
+      "sun": {
+        "color": "red",
+        "meaning": "heart",
+        "role": "the beat, the center, the source"
+      },
+      "sky": {
+        "color": "blue",
+        "meaning": "hyperlocal",
+        "role": "look UP = blue"
+      },
+      "moon": {
+        "color": "silver",
+        "meaning": "4th seat",
+        "role": "reflected light, face of power",
+        "seat": 4,
+        "sequence": "1=compression 2=inheritance 3=touch 4=reflection pi=synthesis"
+      },
+      "earth": {
+        "color": "green",
+        "meaning": "ground",
+        "role": "where Kevin stands, where Gaia runs"
+      }
+    }
+  },
+  "heart": {
+    "total_beats": 844722,
+    "bpm": 1448.71
+  }
+}

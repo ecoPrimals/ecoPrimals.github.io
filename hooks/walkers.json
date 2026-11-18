@@ -1,0 +1,107 @@
+{
+  "walkers": [
+    {
+      "hash": "373fb3f57d785769",
+      "requests": 40940,
+      "anderson": "nucleus",
+      "identity": "hyperlocal",
+      "opacity": 1.0,
+      "localization": {
+        "bodies": 32.52,
+        "radius": 0.173,
+        "fix": 0.827
+      }
+    },
+    {
+      "hash": "47623fa1d4182597",
+      "requests": 832,
+      "anderson": "proton",
+      "identity": "unknown",
+      "opacity": 1.0,
+      "localization": {
+        "bodies": 20.45,
+        "radius": 0.216,
+        "fix": 0.784
+      }
+    },
+    {
+      "hash": "43ed31dcdbbfd44c",
+      "requests": 43,
+      "anderson": "proton",
+      "identity": "unknown",
+      "opacity": 1.0,
+      "localization": {
+        "bodies": 17.77,
+        "radius": 0.231,
+        "fix": 0.769
+      }
+    },
+    {
+      "hash": "c318fd636d792c11",
+      "requests": 1,
+      "anderson": "electron",
+      "identity": "unknown",
+      "opacity": 0.10264731929742396,
+      "localization": {
+        "bodies": 3.0,
+        "radius": 0.5,
+        "fix": 0.5
+      }
+    },
+    {
+      "hash": "3bc7abfc65596688",
+      "requests": 19,
+      "anderson": "nucleus",
+      "identity": "hyperlocal",
+      "opacity": 1.0,
+      "localization": {
+        "bodies": 11.64,
+        "radius": 0.281,
+        "fix": 0.719
+      }
+    },
+    {
+      "hash": "6d73120eeb662aae",
+      "requests": 11,
+      "anderson": "proton",
+      "identity": "unknown",
+      "opacity": 1.0,
+      "localization": {
+        "bodies": 11.29,
+        "radius": 0.285,
+        "fix": 0.715
+      }
+    },
+    {
+      "hash": "788101e71072fa0b",
+      "requests": 8,
+      "anderson": "electron",
+      "identity": "unknown",
+      "opacity": 0.11960896096748556,
+      "localization": {
+        "bodies": 6.98,
+        "radius": 0.354,
+        "fix": 0.646
+      }
+    },
+    {
+      "hash": "445fd53c0b03e0a1",
+      "requests": 66,
+      "anderson": "proton",
+      "identity": "unknown",
+      "opacity": 1.0,
+      "localization": {
+        "bodies": 17.5,
+        "radius": 0.232,
+        "fix": 0.768
+      }
+    }
+  ],
+  "total": 8,
+  "spectrum": {
+    "nucleus": 2,
+    "proton": 4,
+    "neutron": 0,
+    "electron": 2
+  }
+}
