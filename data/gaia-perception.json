@@ -1,0 +1,170 @@
+{
+  "ts": "2026-11-18T15:50:01Z",
+  "title": "Gaia Perception \u2014 living sense-scan",
+  "gates": {
+    "eastGate": {
+      "alive": true,
+      "ip": "127.0.0.1"
+    },
+    "graftGate": {
+      "alive": false,
+      "ip": "192.168.4.107"
+    },
+    "blueGate": {
+      "alive": false,
+      "ip": "192.168.4.100"
+    },
+    "southGate": {
+      "alive": false,
+      "ip": "192.168.4.148"
+    },
+    "ironGate": {
+      "alive": false,
+      "ip": "192.168.4.237"
+    }
+  },
+  "gates_alive": 1,
+  "gates_total": 5,
+  "data": {
+    "total": 1868,
+    "fresh": 63,
+    "stale": 1805,
+    "stale_pct": 96.6,
+    "freshest": {
+      "file": "eastgate-pulse.json",
+      "age_h": 0.0
+    },
+    "stalest": {
+      "file": "cairn-sweep.json",
+      "age_h": 108.7
+    }
+  },
+  "intake_flow": {
+    "intake": 7714,
+    "nutrients": 9734,
+    "ratio": 1.26
+  },
+  "mushrooms": {
+    "total": 23,
+    "healthy": 19,
+    "details": {
+      "mushroom-braid": {
+        "size": 0,
+        "age_h": 4.8,
+        "healthy": false
+      },
+      "mushroom-chipmunk-hears": {
+        "size": 2144,
+        "age_h": 0.1,
+        "healthy": true
+      },
+      "mushroom-compost": {
+        "size": 0,
+        "age_h": 4.8,
+        "healthy": false
+      },
+      "mushroom-create": {
+        "size": 500,
+        "age_h": 0.3,
+        "healthy": true
+      },
+      "mushroom-curiosity": {
+        "size": 1952,
+        "age_h": 0.0,
+        "healthy": true
+      },
+      "mushroom-ear": {
+        "size": 6320,
+        "age_h": 0.0,
+        "healthy": true
+      },
+      "mushroom-knome": {
+        "size": 14550,
+        "age_h": 0.3,
+        "healthy": true
+      },
+      "mushroom-learn": {
+        "size": 1457,
+        "age_h": 0.1,
+        "healthy": true
+      },
+      "mushroom-manifest": {
+        "size": 0,
+        "age_h": 5.2,
+        "healthy": false
+      },
+      "mushroom-masticate": {
+        "size": 6628,
+        "age_h": 0.3,
+        "healthy": true
+      },
+      "mushroom-metrics": {
+        "size": 0,
+        "age_h": 5.2,
+        "healthy": false
+      },
+      "mushroom-neuro": {
+        "size": 134278,
+        "age_h": 0.1,
+        "healthy": true
+      },
+      "mushroom-phosphate": {
+        "size": 20000,
+        "age_h": 0.0,
+        "healthy": true
+      },
+      "mushroom-publish": {
+        "size": 370,
+        "age_h": 0.3,
+        "healthy": true
+      },
+      "mushroom-rss": {
+        "size": 5298,
+        "age_h": 0.3,
+        "healthy": true
+      },
+      "mushroom-sense-scan": {
+        "size": 14920,
+        "age_h": 0.0,
+        "healthy": true
+      },
+      "mushroom-study": {
+        "size": 1432,
+        "age_h": 0.3,
+        "healthy": true
+      },
+      "mushroom-teach": {
+        "size": 1806,
+        "age_h": 0.1,
+        "healthy": true
+      },
+      "mushroom-test": {
+        "size": 25780,
+        "age_h": 0.1,
+        "healthy": true
+      },
+      "mushroom-thymus": {
+        "size": 2709,
+        "age_h": 0.0,
+        "healthy": true
+      },
+      "mushroom-waterlock": {
+        "size": 5280,
+        "age_h": 0.0,
+        "healthy": true
+      },
+      "mushroom-wavefold": {
+        "size": 20203,
+        "age_h": 0.0,
+        "healthy": true
+      },
+      "mushroom-willis": {
+        "size": 7755,
+        "age_h": 0.0,
+        "healthy": true
+      }
+    }
+  },
+  "primal_processes": 25,
+  "philosophy": "No waterfall. Living flow. Always sensing, always feeding, always rebuilding."
+}
