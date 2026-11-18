@@ -1,0 +1,78 @@
+{
+  "ts": "2026-11-14T12:03:55.270597+00:00",
+  "wave": 232,
+  "event": "neuralAPI_relit",
+  "source": "eastGate",
+  "neural_api": {
+    "status": "ALIVE",
+    "version": "4.57.0",
+    "uptime_days": 8.5,
+    "graphs_loaded": 30,
+    "signal_tiers": [
+      "tower",
+      "node",
+      "nest",
+      "meta",
+      "braid"
+    ],
+    "capabilities_registered": 289,
+    "providers": 14,
+    "translations": 265,
+    "total_registry": 2154,
+    "blake3_proof": "lPIcHRsHlxFOwVBXWw45gvOW1HlJoBwm9tIDynxHZkQ=",
+    "signals_graph_symlink": "graphs/signals \u2192 primals/biomeOS/graphs/signals"
+  },
+  "primals_running": 17,
+  "biome": {
+    "eastGate": "ALIVE (BRAIN, load 8.34)",
+    "northGate": "ALIVE (HEART, 0.22ms)",
+    "blueGate": "DOWN (pushed plasmidBin 6h ago, neuralAPI was already live)",
+    "sporeGate": "ALIVE (FORGE)",
+    "ironGate": "ALIVE",
+    "graftGate": "ALIVE",
+    "southGate": "ALIVE"
+  },
+  "hud_urls": {
+    "neural_api": "https://primals.eco/neural-api",
+    "organism": "https://primals.eco/organism",
+    "trace": "https://primals.eco/trace",
+    "retina": "https://primals.eco/retina"
+  },
+  "message": "neuralAPI relit on eastGate following northGate. 30 signal graphs loaded via graphs/signals symlink. All 5 tiers (tower/node/nest/meta/braid) wired. bearDog crypto active \u2014 BLAKE3 hashed Gaia is alive. blueGate was already live with it before going down.",
+  "field_scan": {
+    "IN": 21,
+    "OUT": 5,
+    "BACK": 3,
+    "NOT": 7,
+    "arp_entries": 22,
+    "dhcp_leases": 16,
+    "discoveries": [
+      "Heather S22 Ultra (.110)",
+      "DESKTOP-9QG6LQL (.139)",
+      "Nest Thermostat (.239)",
+      "Xbox (.114 offline)",
+      "IoT .212"
+    ],
+    "spectral": "indoor path-loss RSSI\u2192distance, graph Laplacian eigenvalues",
+    "hud": "https://primals.eco/field"
+  },
+  "msg": "Wave 232: Spatial field live \u2014 21 IN, 7 NOT, 3 BACK, 5 OUT. footPrint overlay at 42.3314\u00b0N 83.0458\u00b0W. Spectral geometry with RSSI signal ranges. 5 new devices discovered via DHCP scan.",
+  "pony_incoming": {
+    "northGate": {
+      "count": 1,
+      "priority": "HIGH",
+      "subject": "RUSTDESK_BINGOCUBE_IDENTITY",
+      "ts": "2026-11-14T07:03:55.270588",
+      "flag": "UNREAD"
+    }
+  },
+  "cellTower_mesh": {
+    "ts": "2026-11-15T23:25:00Z",
+    "towers": 6,
+    "roaming_devices": 4,
+    "pocketBook_layers": 3,
+    "bingoCube_entities": 12817,
+    "principle": "Every gate is a cell tower. Devices roam. The pocketBook holds your identity. bingoCube coordinates the handoff. The organism IS the network.",
+    "formula": "IDENTITY = pocketBook(who) \u00d7 bingoCube(where in social space) \u00d7 cellTower(where in physical space)"
+  }
+}

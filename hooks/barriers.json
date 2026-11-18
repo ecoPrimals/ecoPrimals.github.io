@@ -1,0 +1,174 @@
+{
+  "type": "coagulation-cascade",
+  "token": "GAIA:6ed3c05161da5055",
+  "mesh_hash": "ebf0447f054dfa4b1ada3b1779ca2bfb0610769ae9b4562c7e61a2d6241b0339",
+  "total_clots": 64,
+  "arterial": 0,
+  "venous": 36,
+  "capillary": 25,
+  "triage": {
+    "arterial": [],
+    "venous": [
+      {
+        "location": "northGate:8080",
+        "wound": "port open but no /pulse \u2014 mute organ"
+      },
+      {
+        "location": "eastGate:443",
+        "wound": "port closed/unreachable"
+      },
+      {
+        "location": "eastGate:8443",
+        "wound": "port open but no /pulse \u2014 mute organ"
+      },
+      {
+        "location": "eastGate:80",
+        "wound": "port closed/unreachable"
+      },
+      {
+        "location": "eastGate:8080",
+        "wound": "port open but no /pulse \u2014 mute organ"
+      },
+      {
+        "location": "ironGate:8080",
+        "wound": "port open but no /pulse \u2014 mute organ"
+      },
+      {
+        "location": "ironGate:8443",
+        "wound": "port closed/unreachable"
+      },
+      {
+        "location": "ironGate:9500",
+        "wound": "port closed/unreachable"
+      },
+      {
+        "location": "gaiaPI:8443",
+        "wound": "port closed/unreachable"
+      },
+      {
+        "location": "gaiaPI:8080",
+        "wound": "port closed/unreachable"
+      },
+      {
+        "location": "gaiaPI:80",
+        "wound": "port closed/unreachable"
+      },
+      {
+        "location": "gaiaPI:443",
+        "wound": "port closed/unreachable"
+      },
+      {
+        "location": "westGate:9500",
+        "wound": "port closed/unreachable"
+      },
+      {
+        "location": "westGate:5000",
+        "wound": "port closed/unreachable"
+      },
+      {
+        "location": "skyDeck:21115",
+        "wound": "port closed/unreachable"
+      },
+      {
+        "location": "skyDeck:21116",
+        "wound": "port closed/unreachable"
+      },
+      {
+        "location": "skyDeck:21117",
+        "wound": "port closed/unreachable"
+      },
+      {
+        "location": "skyDeck:21118",
+        "wound": "port closed/unreachable"
+      },
+      {
+        "location": "barracuda.primals.eco",
+        "wound": "DNS resolves but port 443 closed"
+      },
+      {
+        "location": "beardog.primals.eco",
+        "wound": "DNS resolves but port 443 closed"
+      },
+      {
+        "location": "bingocube.primals.eco",
+        "wound": "DNS resolves but port 443 closed"
+      },
+      {
+        "location": "biomeos.primals.eco",
+        "wound": "DNS resolves but port 443 closed"
+      },
+      {
+        "location": "cellmembrane.primals.eco",
+        "wound": "DNS resolves but port 443 closed"
+      },
+      {
+        "location": "coralreef.primals.eco",
+        "wound": "DNS resolves but port 443 closed"
+      },
+      {
+        "location": "esotericwebb.primals.eco",
+        "wound": "DNS resolves but port 443 closed"
+      },
+      {
+        "location": "loamspine.primals.eco",
+        "wound": "DNS resolves but port 443 closed"
+      },
+      {
+        "location": "nestgate.primals.eco",
+        "wound": "DNS resolves but port 443 closed"
+      },
+      {
+        "location": "petaltongue.primals.eco",
+        "wound": "DNS resolves but port 443 closed"
+      },
+      {
+        "location": "rhizocrypt.primals.eco",
+        "wound": "DNS resolves but port 443 closed"
+      },
+      {
+        "location": "skunkbat.primals.eco",
+        "wound": "DNS resolves but port 443 closed"
+      },
+      {
+        "location": "songbird.primals.eco",
+        "wound": "DNS resolves but port 443 closed"
+      },
+      {
+        "location": "sourdough.primals.eco",
+        "wound": "DNS resolves but port 443 closed"
+      },
+      {
+        "location": "squirrel.primals.eco",
+        "wound": "DNS resolves but port 443 closed"
+      },
+      {
+        "location": "swarmvine.primals.eco",
+        "wound": "DNS resolves but port 443 closed"
+      },
+      {
+        "location": "sweetgrass.primals.eco",
+        "wound": "DNS resolves but port 443 closed"
+      },
+      {
+        "location": "toadstool.primals.eco",
+        "wound": "DNS resolves but port 443 closed"
+      }
+    ],
+    "capillary_count": 25
+  },
+  "factors_probed": [
+    "I",
+    "II",
+    "V",
+    "VII",
+    "X",
+    "XII",
+    "XIII"
+  ],
+  "acid": {
+    "pH": 1.5,
+    "barriers_dissolved": 20,
+    "enzyme": "HCl + Pepsin + Bile"
+  },
+  "crush_order": "arterial \u2192 venous \u2192 capillary"
+}

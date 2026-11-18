@@ -1,0 +1,13 @@
+{
+  "corpus": "pi_in_the_sky",
+  "total_papers": 0,
+  "total_kb": 0,
+  "gens": [],
+  "papers": [],
+  "pi_ratio": 10.0091,
+  "metabolism": "\u03c0:1 inputs per output",
+  "io": {
+    "inputs": 17636,
+    "outputs": 1762
+  }
+}

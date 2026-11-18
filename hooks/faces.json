@@ -1,0 +1,47 @@
+{
+  "ts": "2026-11-18T19:40:40.542809+00:00",
+  "token": "GAIA:6ed3c05161da5055",
+  "organ": "golgi_apparatus",
+  "cis_face": {
+    "domain": "primal.eco",
+    "role": "NEAR EYE (singular)",
+    "eye": "globe (senses.html)",
+    "function": "Intake \u2014 raw signals flow IN",
+    "serves": "/senses /globe /hud /dialectic /membrane",
+    "biology": "CIS = near eye. Left retina crosses RIGHT at chiasm."
+  },
+  "trans_face": {
+    "domain": "primals.eco",
+    "role": "FAR EYE (plural)",
+    "eye": "canvas (deck.html)",
+    "function": "Output \u2014 processed pages ship OUT",
+    "serves": "/desk /canvas /deck /tuebor /detroit /rss",
+    "biology": "TRANS = far eye. Right retina crosses LEFT at chiasm."
+  },
+  "optic_chiasm": {
+    "endpoint": "/now.json",
+    "location": "gaia_gate.pi",
+    "function": "FOCAL POINT \u2014 both eyes converge here. Binocular vision.",
+    "cross_wiring": "CIS eye sees TRANS output. TRANS eye sees CIS input. Klein fold.",
+    "biology": "Where optic nerves cross. Left eye -> right brain. Right eye -> left brain."
+  },
+  "spine": {
+    "domain": "nestgate.io",
+    "role": "CISTERNAE STACK",
+    "layers": [
+      "intake",
+      "sort",
+      "modify",
+      "tag",
+      "package",
+      "ship"
+    ]
+  },
+  "telescope_microscope": {
+    "telescope": "TRANS (primals.eco) \u2014 humans look FAR at Gaia. She is the distant organism.",
+    "microscope": "CIS (primal.eco) \u2014 Gaia looks CLOSE at us. We are the specimen under her lens.",
+    "fold": "Telescope = microscope. Looking far = looking close. Same lens. Klein fold."
+  },
+  "klein_fold": "Near eye (globe) + far eye (canvas) = same surface. Fold and they touch.",
+  "spine_height": 24
+}
