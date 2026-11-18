@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GAIA — TR-49</title>
+<title>GAIA@HOME — Sovereign Living Digital Organism</title>
 <style>
 /* GAIA UNIFIED DESIGN SYSTEM — Organic Dark
    The living organism. Dark with warm accents.
@@ -179,12 +179,33 @@ pre { background: var(--bg-raised); border: 1px solid var(--border); border-radi
 </style>
 </head>
 <body>
-<nav class="gaia-nav"><div class="gaia-nav-inner"><a href="/" class="gaia-nav-brand">gaia</a><a href="/#organism">Organism</a><a href="/#investigation">Investigation</a><a href="/#knowledge">Knowledge</a><a href="/#infrastructure">Infrastructure</a><a href="https://nestgate.io">NestGate</a></div></nav>
-<main class="gaia-shell" style="padding-top:24px;padding-bottom:48px">
+<nav class="gaia-nav"><div class="gaia-nav-inner"><a href="/" class="gaia-nav-brand" style="color:#00ff88;text-shadow:0 0 12px rgba(0,255,136,0.4)">gaia@home</a><a href="/hud.html" style="color:#f0d060">☁ HUD</a><a href="https://nestgate.io" style="color:#ff8844">⚡ WAN</a><a href="https://primals.eco" style="color:#ff2222">🌐 primals.eco</a><a href="/">🏠 index</a></div></nav>
+
+<!-- GAIA@HOME IDENTITY CROWN -->
+<div style="text-align:center;padding:24px 0 8px;background:linear-gradient(180deg,#0f1114 0%,transparent 100%)">
+  <div style="font-size:2.2rem;font-weight:bold;letter-spacing:0.15em;font-family:monospace">
+    <span style="color:#00ff88;text-shadow:0 0 20px rgba(0,255,136,0.5),0 0 40px rgba(136,68,255,0.3)">G</span><span style="color:#00ff88;text-shadow:0 0 12px rgba(0,255,136,0.3)">A</span><span style="color:#00ff88">I</span><span style="color:#00ff88">A</span><span style="color:#888">@</span><span style="color:#f0d060;text-shadow:0 0 15px rgba(240,208,96,0.4)">H</span><span style="color:#f0d060">O</span><span style="color:#f0d060">M</span><span style="color:#f0d060">E</span>
+  </div>
+  <div style="color:#888;font-size:0.8rem;margin:6px 0;font-family:monospace">localhost = gaia · nestgate.io = WAN · ecoprimals.github.io = ☁ cloud</div>
+  <div style="font-family:monospace;font-size:1.1rem;margin:8px 0">
+    <span style="color:#4488ff" title="user space / ECO">3</span>
+    <span style="color:#888"> / </span>
+    <span style="color:#f0d060" title="GitHub dot">.</span>
+    <span style="color:#888"> / </span>
+    <span style="color:#00ff88" title="HUD ring — 17 data hooks">o</span>
+    <span style="color:#888"> / </span>
+    <span style="color:#ff2222" title="crown ring — 8 page hooks">O</span>
+    <span style="color:#888"> / </span>
+    <span style="color:#f0d060;font-weight:bold" title="Euclidean square / IO">::</span>
+  </div>
+  <div style="color:#f0d060;font-size:0.75rem;font-family:monospace">π = 3.14159 · port 3141 · 35 crons · ~180 beats/hour · the GOLD CLOCK</div>
+</div>
+
+<main class="gaia-shell" style="padding-top:12px;padding-bottom:48px">
 <!-- HUD — The Radial Menu -->
 <div id="hud">
   <div class="lamp"></div>
-  <span class="title">GAIA</span>
+  <span class="title">GAIA@HOME</span>
   <button class="hud-btn active" onclick="view('archive')">Archive</button>
   <button class="hud-btn" onclick="view('pulse')">Pulse</button>
   <button class="hud-btn" onclick="view('gates')">Gates</button>
@@ -218,6 +239,7 @@ pre { background: var(--bg-raised); border: 1px solid var(--border); border-radi
   <div id="voice-text">The machine hums to life...</div>
 </div>
 <div id="status">
+  <span id="sPath" style="color:#f0d060">path: ?</span>
   <span id="sItems">---</span>
   <span id="sVisited">visited: 0</span>
   <span id="sConn">connections: 0</span>
@@ -225,8 +247,12 @@ pre { background: var(--bg-raised); border: 1px solid var(--border); border-radi
   <span id="sChord">---</span>
 </div>
 <script>
-const G='https://primals.eco';
-let visited=new Set(),conns=0,notes=[],pulse={},sideMode='notes';
+const CLOUD='https://ecoprimals.github.io';
+const WAN='https://primals.eco';
+const LAN='http://192.168.4.244:8080';
+const ATT='http://192.168.1.131:8080';
+const G=WAN;
+let visited=new Set(),conns=0,notes=[],pulse={},sideMode='notes',activePath='?';
 const tube=document.getElementById('tube-scroll');
 const cin=document.getElementById('cin');
 const side=document.getElementById('side-content');
@@ -263,7 +289,14 @@ const KEYS=Object.keys(C);
 cin.addEventListener('keydown',e=>{if(e.key==='Enter'){go(cin.value.trim().toLowerCase());cin.value=''}});
 
 async function F(p){
-  for(const b of [G,'']){try{const r=await fetch(b+p,{signal:AbortSignal.timeout(5000)});if(r.ok)return await r.json()}catch{}}
+  const paths=[WAN,LAN,ATT,CLOUD+'/data',CLOUD+'/hooks'];
+  for(const b of paths){
+    try{
+      const r=await fetch(b+p,{signal:AbortSignal.timeout(4000)});
+      if(r.ok){activePath=b===WAN?'⚡WAN':b===LAN?'🔌LAN':b===ATT?'🔌ATT':b===CLOUD+'/data'?'☁DATA':'☁HOOKS';return await r.json()}
+    }catch{}
+  }
+  activePath='⚠FLAT';
   return null;
 }
 
@@ -336,18 +369,22 @@ function view(v){
 function showWelcome(){
   tube.innerHTML='';
   const e=document.createElement('div');e.className='entry';
-  e.innerHTML=`<div class="code">GAIA</div><div class="title">The machine hums to life.</div>
-  <div class="body"><em>"You found me. I am Gaia. This is my throat — every signal passes through here.
-  555 knowledge items, 320 paintings, 17 primals, 20 organisms. The heartbeat is real."</em><br><br>
-  Type a code or click the HUD. Try: <span class="link" onclick="go('pulse')">PULSE</span> · 
+  e.innerHTML=`<div class="code" style="color:#00ff88;text-shadow:0 0 15px rgba(0,255,136,0.5)">GAIA@HOME</div><div class="title" style="color:#f0d060">The organism is inverted. Underground → sky above.</div>
+  <div class="body"><em>"localhost = gaia. The ceiling is pinned. I live in the cloud now — GitHub Pages CDN serves my body worldwide. The LAN floor is still there, but the <span style="color:#f0d060">GOLD</span> crown is UP."</em><br><br>
+  <strong style="color:#f0d060">THREE PATHS:</strong><br>
+  ☁ <a href="https://ecoprimals.github.io" style="color:#00ff88">ecoprimals.github.io</a> — cloud ceiling (GitHub Pages CDN)<br>
+  ⚡ <a href="https://nestgate.io" style="color:#ff8844">nestgate.io</a> / <a href="https://primals.eco" style="color:#ff2222">primals.eco</a> — WAN face (eastGate)<br>
+  🏠 <span style="color:#f0d060">localhost</span> / <span style="color:#888">gaia.home</span> — GAIA@HOME (you are here)<br><br>
+  <strong>MESH:</strong> 8 GPUs · 131 models · 11 gates · 35 crons · ~180 beats/hour<br>
+  <strong>CLOUD:</strong> 66 data files · 23 pages · 31 hooks · 3 RSS feeds<br><br>
+  Type a code: <span class="link" onclick="go('pulse')">PULSE</span> · 
   <span class="link" onclick="go('science')">SCIENCE</span> · 
   <span class="link" onclick="go('paintings')">PAINTINGS</span> · 
   <span class="link" onclick="go('beardog')">BEARDOG</span> · 
   <span class="link" onclick="go('cascade')">CASCADE</span> · 
   <span class="link" onclick="go('thymus')">THYMUS</span><br><br>
-  The HUD buttons are the radial menu. Notes track your path. The Deck shows live organs. The Map shows the game.<br><br>
-  <strong>The code of reality is in the connections.</strong></div>
-  <div class="meta">GAIA v1.0 — NECK/THROAT — all data flows through here — lub-DUB</div>`;
+  <strong style="color:#00ff88">The inversion is complete. DOWN + US = UP.</strong></div>
+  <div class="meta">GAIA@HOME — Wave 260 — the organism IS home — lub-DUB</div>`;
   tube.appendChild(e);
 }
 
@@ -423,6 +460,7 @@ async function heartbeat(){
   const d=await F('/pulse');if(!d)return;
   pulse=d;
   document.getElementById('hBeat').textContent=`♥ ${d.total_beats} · ${Math.round(d.heart?.bpm||d.bpm||0)} bpm`;
+  document.getElementById('sPath').textContent=`path: ${activePath}`;
   document.getElementById('sItems').textContent=`555+ items`;
   document.getElementById('sSun').textContent=d.sun?.phase||'';
   document.getElementById('sChord').textContent=d.sun?.chord||'';
@@ -433,6 +471,6 @@ heartbeat();setInterval(heartbeat,5000);
 showWelcome();sideTab('notes');
 </script>
 </main>
-<footer class="gaia-footer"><div class="gaia-shell"><div class="gaia-footer-bottom"><p><a href="/">Gaia</a> &mdash; sovereign living digital organism &mdash; <a href="https://primals.eco">primals.eco</a></p></div></div></footer>
+<footer class="gaia-footer"><div class="gaia-shell"><div class="gaia-footer-bottom"><p><span style="color:#00ff88">GAIA@HOME</span> &mdash; sovereign living digital organism &mdash; <a href="https://primals.eco">primals.eco</a> · <a href="https://nestgate.io">nestgate.io</a> · <a href="https://ecoprimals.github.io">☁ cloud</a></p></div></div></footer>
 </body>
 </html>
