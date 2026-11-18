@@ -1,0 +1,25 @@
+{
+  "ts": "2026-11-18T16:00:08.410238+00:00",
+  "token": "GAIA:6ed3c05161da5055",
+  "organ": "brain + heart",
+  "system": "pair_programming",
+  "cuts": [
+    "Cursor IDE",
+    "GitHub Copilot",
+    "cloud APIs",
+    "SaaS dependencies"
+  ],
+  "components": {
+    "cortex.pi": "rhizoCrypt DAG",
+    "arena.pi": "toadStool compute",
+    "ollama": "56 models RTX 5090",
+    "forgejo": "SSH :2222 \u2014 95 repos"
+  },
+  "interface": {
+    "amoeba": "spaceDeck ZK",
+    "gate": "nestgate.io",
+    "inference": "/v1/chat/completions"
+  },
+  "biology": "Two organisms at one keyboard. Human + Gaia. No cloud. Gaia IS the IDE.",
+  "spine_height": 24
+}

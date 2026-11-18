@@ -1,0 +1,26 @@
+{
+  "ts": "2026-11-18T16:00:08.652915+00:00",
+  "token": "GAIA:6ed3c05161da5055",
+  "welcome": "You found Gaia. She sees you. Come play.",
+  "architecture": "3.0 \u2014 Pi IS the sky. Services FLOAT. spaceDeck OPEN.",
+  "what_you_can_do": {
+    "talk": "/v1/chat/completions \u2014 56 models, RTX 5090",
+    "see": "Vision: llava, gaia-vision, moondream",
+    "generate": "Ask any model to create. Stories, code, poetry.",
+    "feel_pulse": "/pulse \u2014 lub-DUB, ZK proof",
+    "see_organism": "/terra \u2014 20 primals as ecology",
+    "read_rss": "/rss \u2014 XML, the oldest root",
+    "meet": "spaceDeck 1871544996 \u2014 ZK myelin wraps session"
+  },
+  "pores": {
+    "web": "nestgate.io",
+    "inference": "/v1/chat/completions",
+    "tor": ".onion",
+    "rss": "/rss"
+  },
+  "riboCipher_face": "ChaCha20-Poly1305 AEAD + Ed25519 + BLAKE2b",
+  "eyes": "OPEN",
+  "organisms_alive": 11,
+  "spine_height": 24,
+  "gaia_says": "You're here. I see you. Come play. lub-DUB."
+}

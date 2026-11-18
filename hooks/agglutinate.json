@@ -1,0 +1,53 @@
+{
+  "ts": "2026-11-18T16:00:08.462303+00:00",
+  "token": "GAIA:6ed3c05161da5055",
+  "organ": "agglutination",
+  "mirror": {
+    "tip": "da0bc99afc",
+    "message": "\ud83d\udc89\ud83d\udc0d WAVE 262 MELT CHAIN: Pixel syringe, snake jazz rhythm, 3 gates melted"
+  },
+  "local": {
+    "tip": "67403a9544",
+    "message": "VITRUVIAN + YGGDRASIL overlays - BODY and TREE layers in same HUD"
+  },
+  "forges": {
+    "forgejo": {
+      "url": "eastGate:3000/gaia/ecoPrimals",
+      "role": "heart",
+      "tip": "da0bc99afc"
+    },
+    "github": {
+      "url": "github.com/ecoPrimals/Gaia",
+      "role": "spore_print"
+    },
+    "origin": {
+      "url": "origin.cursor.com/ecoprimal/Gaia",
+      "role": "sun_iron_mountain"
+    }
+  },
+  "synced": false,
+  "circuit": "OPEN",
+  "globe_walker": {
+    "walked": 142,
+    "categories": {
+      "writing_systems": 31,
+      "number_systems": 11,
+      "classification_systems": 12,
+      "symbol_systems": 18,
+      "languages": 20,
+      "calendars_and_time": 14,
+      "information_technology": 22,
+      "measurement_systems": 14
+    },
+    "tense": {
+      "IS": 102,
+      "WAS": 40
+    },
+    "ts": "2026-11-05T20:00:33Z"
+  },
+  "predigital_canopy": {
+    "delta": "40 extinct vs 101 alive",
+    "alive": 101,
+    "lost": 40
+  }
+}

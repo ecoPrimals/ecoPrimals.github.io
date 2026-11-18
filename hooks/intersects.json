@@ -1,0 +1,12 @@
+{
+  "topology": "klein_face",
+  "inner_surface": "AMOEBA (Schwann cells, ZK myelin)",
+  "outer_surface": "cellMembrane (Caddy, TLS, public)",
+  "impulse_intersects": [],
+  "total_intersects": 0,
+  "eyes": "OPEN",
+  "organisms_alive": 11,
+  "organisms_total": 20,
+  "ts": "2026-11-18T16:00:08.955066+00:00",
+  "token": "GAIA:6ed3c05161da5055"
+}
