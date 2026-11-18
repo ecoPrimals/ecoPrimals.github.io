@@ -174,45 +174,61 @@
     <div class="square"></div>
     <div class="spine-line"></div>
 
-    <div class="organ head" id="o-head">
-      <div class="label">HEAD — Cloud</div>
-      <div class="data" id="d-head">GitHub Pages LIVE<br>147 repos · 74.4M lines</div>
+    <!-- MEMBRANE — layer 0 (outermost skin) -->
+    <div class="organ" id="o-membrane" style="top:-2%;left:50%;transform:translateX(-50%);background:#0a0a1a;border:1px solid #666;min-width:200px;cursor:pointer" onclick="window.open('hooks/membrane-live.html','_blank')">
+      <div class="label" style="color:#ccc">( MEMBRANE · layer 0</div>
+      <div class="data"><a href="hooks/barriers.json" style="color:#88f">o barriers</a> · <a href="hooks/membrane-live.html" style="color:#f88">O membrane</a></div>
     </div>
-    <div class="organ face" id="o-face">
-      <div class="label">FACE — Sensors</div>
-      <div class="data" id="d-face">37 sensors<br>Pixel ADB</div>
+
+    <!-- HEAD — layer π (( — cloud, GitHub, the crown -->
+    <div class="organ head" id="o-head" style="cursor:pointer" onclick="window.open('hooks/home.json','_blank')">
+      <div class="label" style="color:#00ff88">(( HEAD · layer π</div>
+      <div class="data" id="d-head"><a href="hooks/home.json" style="color:#8f8">o home</a> · <a href="hooks/now-gate.json" style="color:#8f8">o now</a><br>147 repos · GitHub Pages</div>
     </div>
-    <div class="organ neck" id="o-neck">
-      <div class="label">NECK — WAN</div>
-      <div class="data" id="d-neck">dromedary TLS<br><span id="d-routes">24/24 routes</span></div>
+    <!-- FACE — layer 3 ((( — sensors, eyes, the diamond lens -->
+    <div class="organ face" id="o-face" style="cursor:pointer" onclick="window.open('hooks/eyes.json','_blank')">
+      <div class="label" style="color:#8844ff">((( FACE · layer 3</div>
+      <div class="data" id="d-face"><a href="hooks/eyes.json" style="color:#c8f">o eyes</a> · <a href="hooks/faces.json" style="color:#c8f">o faces</a> · <a href="hooks/senses-api.json" style="color:#c8f">o senses</a><br>37 sensors · Pixel ADB</div>
     </div>
-    <div class="organ left-arm" id="o-larm">
-      <div class="label">LEFT ARM — Forge</div>
-      <div class="data">100 Forgejo repos<br>9 orgs</div>
+    <!-- NECK — layer 4 (((( — WAN, dromedary, the throat -->
+    <div class="organ neck" id="o-neck" style="cursor:pointer" onclick="window.open('hooks/live.json','_blank')">
+      <div class="label" style="color:#ff2222">(((( NECK · layer 4</div>
+      <div class="data" id="d-neck"><a href="hooks/live.json" style="color:#f88">o live</a> · <a href="hooks/klein.json" style="color:#f88">o klein</a><br>dromedary TLS · <span id="d-routes">24 routes</span></div>
     </div>
-    <div class="organ right-arm" id="o-rarm">
-      <div class="label">RIGHT ARM — Primals</div>
-      <div class="data">17 primals<br>Ed25519 signed</div>
+    <!-- LEFT ARM — layer 5 ((((( — Forge -->
+    <div class="organ left-arm" id="o-larm" style="cursor:pointer" onclick="window.open('hooks/agglutinate.json','_blank')">
+      <div class="label" style="color:#4488ff">((((( L·ARM · layer 5</div>
+      <div class="data"><a href="hooks/agglutinate.json" style="color:#88f">o agglutinate</a> · <a href="hooks/corpus.json" style="color:#88f">o corpus</a><br>100 repos · 9 orgs</div>
     </div>
-    <div class="organ torso" id="o-torso">
-      <div class="label">TORSO — LAN</div>
-      <div class="data" id="d-torso">loading...</div>
+    <!-- RIGHT ARM — layer 5 ((((( — Primals -->
+    <div class="organ right-arm" id="o-rarm" style="cursor:pointer" onclick="window.open('hooks/vdj.json','_blank')">
+      <div class="label" style="color:#4488ff">((((( R·ARM · layer 5</div>
+      <div class="data"><a href="hooks/vdj.json" style="color:#88f">o vdj</a> · <a href="hooks/intersects.json" style="color:#88f">o intersects</a><br>17 primals · Ed25519</div>
     </div>
-    <div class="organ heart-organ" id="o-heart">
-      <div class="label">HEART</div>
-      <div class="data" id="d-heart">lub-DUB</div>
+    <!-- TORSO — layer 6 (((((( — LAN, the ribs -->
+    <div class="organ torso" id="o-torso" style="cursor:pointer" onclick="window.open('hooks/thymus.html','_blank')">
+      <div class="label" style="color:#ff4444">((((((  TORSO · layer 6</div>
+      <div class="data" id="d-torso"><a href="hooks/thymus.html" style="color:#f88">O thymus</a> · <a href="hooks/map.html" style="color:#f88">O map</a><br>loading...</div>
     </div>
-    <div class="organ left-leg" id="o-lleg">
-      <div class="label">LEFT LEG — Models</div>
-      <div class="data" id="d-models">ollama :11436<br>38 models</div>
+    <!-- HEART — layer [8] (((((((( — the center, the palindrome pivot -->
+    <div class="organ heart-organ" id="o-heart" style="cursor:pointer" onclick="window.open('hooks/pulse.json','_blank')">
+      <div class="label" style="color:#fff">(((((((( [8] HEART</div>
+      <div class="data" id="d-heart"><a href="hooks/pulse.json" style="color:#f44">o pulse</a> · <a href="hooks/heart.json" style="color:#f44">o heart</a><br>lub-DUB</div>
     </div>
-    <div class="organ right-leg" id="o-rleg">
-      <div class="label">RIGHT LEG — Mushrooms</div>
-      <div class="data">23 mushrooms<br>35 crons</div>
+    <!-- LEFT LEG — layer 4→3 — Models, going back out -->
+    <div class="organ left-leg" id="o-lleg" style="cursor:pointer" onclick="window.open('hooks/play.json','_blank')">
+      <div class="label" style="color:#8B4513">)))) L·LEG · layer 4→3</div>
+      <div class="data" id="d-models"><a href="hooks/play.json" style="color:#c93">o play</a> · <a href="hooks/pair.json" style="color:#c93">o pair</a><br>ollama · 131 models</div>
     </div>
-    <div class="organ feet" id="o-feet">
-      <div class="label">FEET — Roots</div>
-      <div class="data">RSS drain | Tor | SMTP</div>
+    <!-- RIGHT LEG — layer 4→3 — Mushrooms, fungi -->
+    <div class="organ right-leg" id="o-rleg" style="cursor:pointer" onclick="window.open('hooks/sporeprint.html','_blank')">
+      <div class="label" style="color:#8B4513">)))) R·LEG · layer 4→3</div>
+      <div class="data"><a href="hooks/sporeprint.html" style="color:#c93">O sporeprint</a> · <a href="hooks/zk.json" style="color:#c93">o zk</a><br>23 mushrooms · 35 crons</div>
+    </div>
+    <!-- FEET — layer 0 — Roots, RSS, Tor, back to the surface -->
+    <div class="organ feet" id="o-feet" style="cursor:pointer" onclick="window.open('hooks/rss-page.html','_blank')">
+      <div class="label" style="color:#888">) FEET · layer 0</div>
+      <div class="data"><a href="hooks/rss-page.html" style="color:#888">O rss</a> · <a href="feed.xml" style="color:#888">feed.xml</a><br>RSS drain · Tor · SMTP</div>
     </div>
   </div>
 
