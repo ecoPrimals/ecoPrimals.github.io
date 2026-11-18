@@ -218,7 +218,25 @@ pre { background: var(--bg-raised); border: 1px solid var(--border); border-radi
 'use strict';
 
 var H = location.hostname;
-var TISSUE = 'http://' + H + ':5820';
+var TISSUE_PATHS = [
+  'https://primals.eco',
+  'http://192.168.1.131:11434',
+  'http://192.168.4.244:11436',
+  'http://' + H + ':5820'
+];
+var TISSUE = TISSUE_PATHS[0];
+var tissueAlive = false;
+
+async function findTissue() {
+  for (var i = 0; i < TISSUE_PATHS.length; i++) {
+    try {
+      var r = await fetch(TISSUE_PATHS[i] + '/api/tags', {signal: AbortSignal.timeout(3000)});
+      if (r.ok) { TISSUE = TISSUE_PATHS[i]; tissueAlive = true; return; }
+    } catch(e) {}
+  }
+  tissueAlive = false;
+}
+findTissue();
 
 // --- WORLD CONFIG ---
 var TILE = 16;
@@ -592,19 +610,24 @@ function processTissueQueue() {
     });
 }
 
-function checkTissueStatus() {
-  fetch(TISSUE + '/api/tags')
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
+async function checkTissueStatus() {
+  await findTissue();
+  if (tissueAlive) {
+    try {
+      var r = await fetch(TISSUE + '/api/tags');
+      var data = await r.json();
       var models = data.models ? data.models.length : 0;
       document.getElementById('tissue-status').textContent =
-        'tissue: ✓ ' + models + ' models on RTX 5090';
+        'tissue: ✓ ' + models + ' models via ' + (TISSUE.includes('primals') ? 'WAN' : TISSUE.includes('131') ? 'ATT' : TISSUE.includes('244') ? 'LAN' : 'local');
       document.getElementById('tissue-status').style.color = '#4a4';
-    })
-    .catch(function() {
-      document.getElementById('tissue-status').textContent = 'tissue: offline';
+    } catch(e) {
+      document.getElementById('tissue-status').textContent = 'tissue: offline (A-Life runs standalone)';
       document.getElementById('tissue-status').style.color = '#a44';
-    });
+    }
+  } else {
+    document.getElementById('tissue-status').textContent = 'tissue: offline (A-Life runs standalone)';
+    document.getElementById('tissue-status').style.color = '#aa6';
+  }
 }
 
 // --- GAME LOG ---
