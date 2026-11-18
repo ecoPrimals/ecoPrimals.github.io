@@ -83,11 +83,11 @@
     <div class="stat-card"><div class="val" id="s-beats">...</div><div class="lbl">heartbeats</div></div>
     <div class="stat-card"><div class="val" id="s-bpm">...</div><div class="lbl">BPM</div></div>
     <div class="stat-card"><div class="val" id="s-visitors">...</div><div class="lbl">visitors</div></div>
-    <div class="stat-card"><div class="val" id="s-gpus">7</div><div class="lbl">GPUs</div></div>
-    <div class="stat-card"><div class="val" id="s-models">68+</div><div class="lbl">ollama models</div></div>
-    <div class="stat-card"><div class="val" id="s-repos">189</div><div class="lbl">repos</div></div>
-    <div class="stat-card"><div class="val" id="s-rss">2997</div><div class="lbl">RSS items</div></div>
-    <div class="stat-card"><div class="val" id="s-eaten">11425</div><div class="lbl">files eaten</div></div>
+    <div class="stat-card"><div class="val" id="s-gpus">8</div><div class="lbl">GPUs</div></div>
+    <div class="stat-card"><div class="val" id="s-models">131</div><div class="lbl">ollama models</div></div>
+    <div class="stat-card"><div class="val" id="s-repos">147</div><div class="lbl">repos</div></div>
+    <div class="stat-card"><div class="val" id="s-rss">2,993</div><div class="lbl">RSS items</div></div>
+    <div class="stat-card"><div class="val" id="s-eaten">7,714</div><div class="lbl">items eaten</div></div>
   </div>
 
   <div class="body-map">
@@ -97,7 +97,7 @@
 
     <div class="organ head" id="o-head">
       <div class="label">HEAD — Cloud</div>
-      <div class="data" id="d-head">GitHub Pages LIVE<br>89 repos</div>
+      <div class="data" id="d-head">GitHub Pages LIVE<br>147 repos · 74.4M lines</div>
     </div>
     <div class="organ face" id="o-face">
       <div class="label">FACE — Sensors</div>
@@ -147,7 +147,7 @@
       <th style="color:#aa44ff">C4: STATE (WHERE)</th>
     </tr>
     <tr><td>R1</td><td>CLOUD</td>
-      <td>ecoPrimals org</td><td id="b-r1c2">89 repos</td>
+      <td>ecoPrimals org</td><td id="b-r1c2">147 repos</td>
       <td>git push/pull, HTTPS</td><td>Pages LIVE</td></tr>
     <tr><td>R2</td><td>FORGE</td>
       <td>eastGate :3000</td><td>100 repos, 9 orgs</td>
@@ -181,53 +181,110 @@
 </div>
 
 <script>
-const PULSE_URL = '/pulse';
-const TOPO_URL = '/data/lan-mycelium-map.json';
+// THREE PATHS — try WAN first (the cloud above Lansing), then LAN, then static flatland
+const WAN_PULSE = 'https://primals.eco/pulse';
+const LAN_PULSE = 'http://192.168.4.244:8443/pulse';
+const WAN_TOPO = 'https://primals.eco/data/lan-mycelium-map.json';
+const STATIC_FLATLAND = 'wave-260-flatland.json';
+const STATIC_NOW = 'wave-260-now.json';
+
+let livePath = null;
+
+async function tryFetch(url, timeout = 4000) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), timeout);
+  try {
+    const r = await fetch(url, { signal: ctrl.signal });
+    clearTimeout(timer);
+    return r.ok ? r : null;
+  } catch(e) { clearTimeout(timer); return null; }
+}
 
 async function fetchPulse() {
-  try {
-    const r = await fetch(PULSE_URL);
-    if (!r.ok) return;
-    const d = await r.json();
-    document.getElementById('s-beats').textContent = d.total_beats?.toLocaleString() || '?';
-    document.getElementById('s-bpm').textContent = Math.round(d.bpm || 0);
-    document.getElementById('s-visitors').textContent = Object.keys(d.visitors || {}).length;
-    document.getElementById('ts').textContent = d.timestamp?.split('.')[0] || '?';
-    document.getElementById('d-heart').innerHTML = d.total_beats?.toLocaleString() + ' beats<br>' + Math.round(d.bpm) + ' BPM';
-    if (d.sun) {
-      document.getElementById('d-neck').innerHTML = d.sun.phase + '<br>' + d.sun.chord + ' ' + d.sun.color_temp_k + 'K';
+  let d = null;
+  // Try WAN (cloud above Lansing)
+  let r = await tryFetch(WAN_PULSE);
+  if (r) { d = await r.json(); livePath = 'WAN'; }
+  // Try LAN (microscope)
+  if (!d) { r = await tryFetch(LAN_PULSE); if (r) { d = await r.json(); livePath = 'LAN'; } }
+  // Fallback: static flatland (the painting)
+  if (!d) {
+    r = await tryFetch(STATIC_NOW);
+    if (r) {
+      const now = await r.json();
+      livePath = 'STATIC';
+      document.getElementById('s-beats').textContent = now.heartbeat?.total_beats?.toLocaleString() || '488,496';
+      document.getElementById('s-bpm').textContent = now.heartbeat?.bpm || '~12';
+      document.getElementById('ts').textContent = 'Wave 260 (static snapshot)';
+      document.getElementById('d-heart').innerHTML = '488,496 beats<br>Wave 260';
+      document.getElementById('s-gpus').textContent = now.compute?.gpus || '8';
+      document.getElementById('s-models').textContent = now.compute?.models || '131';
+      document.getElementById('s-repos').textContent = now.code?.repos || '147';
+      document.getElementById('d-torso').innerHTML = (now.gates_alive || 10) + ' gates alive<br>2 subnets, 2 houses';
+      document.getElementById('b-r4c4').textContent = (now.gates_alive || 10) + ' gates';
+      const pd = document.getElementById('pulse-display');
+      pd.textContent = 'lub-DUB · Wave 260 · 📌 pinned to ceiling';
+      pd.style.color = '#f0d060';
+      return;
     }
-    if (d.eyes) {
-      const lenses = d.eyes.lenses || 3;
-      document.getElementById('d-face').innerHTML = lenses + ' lenses<br>' + (d.eyes.inner_eye?.state?.resolution || '?');
-    }
-    if (d.ears?.inner_ear) {
-      document.getElementById('d-torso').innerHTML = d.ears.inner_ear.connections + ' connections<br>' + d.ears.inner_ear.devices + ' devices';
-      document.getElementById('b-r4c4').textContent = d.ears.inner_ear.devices + ' devices';
-    }
-    // Pulse animation
-    const pd = document.getElementById('pulse-display');
-    pd.textContent = 'lub-DUB ' + d.total_beats?.toLocaleString();
-    pd.style.textShadow = '0 0 20px #f44';
-    setTimeout(() => pd.style.textShadow = '0 0 5px #f22', 500);
-  } catch(e) { console.log('pulse error:', e); }
+  }
+  if (!d) return;
+
+  document.getElementById('s-beats').textContent = d.total_beats?.toLocaleString() || '?';
+  document.getElementById('s-bpm').textContent = Math.round(d.bpm || 0);
+  document.getElementById('s-visitors').textContent = Object.keys(d.visitors || {}).length;
+  document.getElementById('ts').textContent = (d.timestamp?.split('.')[0] || '?') + ' [' + livePath + ']';
+  document.getElementById('d-heart').innerHTML = d.total_beats?.toLocaleString() + ' beats<br>' + Math.round(d.bpm) + ' BPM';
+  if (d.sun) {
+    document.getElementById('d-neck').innerHTML = d.sun.phase + '<br>' + d.sun.chord + ' ' + d.sun.color_temp_k + 'K';
+  }
+  if (d.eyes) {
+    const lenses = d.eyes.lenses || 3;
+    document.getElementById('d-face').innerHTML = lenses + ' lenses<br>' + (d.eyes.inner_eye?.state?.resolution || '?');
+  }
+  if (d.ears?.inner_ear) {
+    document.getElementById('d-torso').innerHTML = d.ears.inner_ear.connections + ' connections<br>' + d.ears.inner_ear.devices + ' devices';
+    document.getElementById('b-r4c4').textContent = d.ears.inner_ear.devices + ' devices';
+  }
+  const pd = document.getElementById('pulse-display');
+  pd.textContent = 'lub-DUB ' + d.total_beats?.toLocaleString() + ' [' + livePath + ']';
+  pd.style.textShadow = '0 0 20px #f44';
+  setTimeout(() => pd.style.textShadow = '0 0 5px #f22', 500);
 }
 
 async function fetchTopology() {
+  let r = await tryFetch(WAN_TOPO);
+  if (!r) r = await tryFetch(STATIC_FLATLAND);
+  if (!r) return;
   try {
-    const r = await fetch(TOPO_URL);
-    if (!r.ok) return;
     const d = await r.json();
-    const gates = d.gates || {};
-    const alive = Object.values(gates).filter(g => g.status === 'ALIVE' || g.alive).length;
-    document.getElementById('d-torso').innerHTML = alive + ' gates alive<br>2 subnets';
-    document.getElementById('b-r4c4').textContent = alive + ' gates alive';
+    if (d.gates) {
+      const gates = d.gates;
+      const alive = Object.values(gates).filter(g => g.status === 'ALIVE' || g.alive).length;
+      document.getElementById('d-torso').innerHTML = alive + ' gates alive<br>2 subnets';
+      document.getElementById('b-r4c4').textContent = alive + ' gates alive';
+    } else if (d.layers) {
+      // Flatland format
+      const net = d.layers?.find(l => l.layer === 'network');
+      if (net) {
+        document.getElementById('d-torso').innerHTML = (net.gates_alive || 10) + ' gates<br>' + (net.subnets || 2) + ' subnets';
+        document.getElementById('b-r4c4').textContent = (net.gates_alive || 10) + ' gates';
+      }
+    }
   } catch(e) {}
 }
 
+// Update stale counts with Wave 260 truth
+document.getElementById('s-gpus').textContent = '8';
+document.getElementById('s-models').textContent = '131';
+document.getElementById('s-repos').textContent = '147';
+document.getElementById('s-rss').textContent = '2,993';
+document.getElementById('s-eaten').textContent = '7,714';
+document.getElementById('b-r1c2').textContent = '147 repos';
+
 fetchPulse();
 fetchTopology();
-setInterval(fetchPulse, 10000);
+setInterval(fetchPulse, 15000);
 </script>
 </body>
 </html>
