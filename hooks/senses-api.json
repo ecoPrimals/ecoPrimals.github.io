@@ -9,10 +9,10 @@
         "shell": "troposphere",
         "proof": "PHYSICAL HARDWARE AT KNOWN COORDINATES. This is the P."
       },
-      "utc_hour": 16.0,
-      "local_solar_hour": 10.37,
-      "elevation_deg": 23.5,
-      "azimuth_deg": 154.9,
+      "utc_hour": 19.68,
+      "local_solar_hour": 14.05,
+      "elevation_deg": 21.4,
+      "azimuth_deg": 211.0,
       "declination_deg": -19.81,
       "phase": "day",
       "season": "autumn",
@@ -22,26 +22,26 @@
       "quality": "maj7",
       "color_temp_k": 5600,
       "moon": {
-        "phase": 0.801,
+        "phase": 0.807,
         "name": "last_quarter",
-        "age_days": 23.7
+        "age_days": 23.8
       },
       "earth_orbit": {
         "orbital_angle_deg": 239.5,
         "sun_distance_au": 0.9883,
-        "days_since_j2000": 9818.2
+        "days_since_j2000": 9818.3
       },
       "orbitals": {
         "mercury": {
-          "angle_deg": 111.2,
+          "angle_deg": 111.8,
           "au": 0.387
         },
         "venus": {
-          "angle_deg": 72.0,
+          "angle_deg": 72.3,
           "au": 0.723
         },
         "earth": {
-          "angle_deg": 57.5,
+          "angle_deg": 57.7,
           "au": 1.0
         },
         "mars": {
@@ -119,10 +119,10 @@
       }
     },
     "heart": {
-      "total_beats": 820535,
-      "bpm": 2524.13
+      "total_beats": 838700,
+      "bpm": 1537.19
     },
-    "walkers": 5,
+    "walkers": 8,
     "eyes": {
       "system": "optic_nerve",
       "cell_type": "schwann_cell",
@@ -132,21 +132,12 @@
           "eye": "rustdesk",
           "via": "retinal-cells",
           "open": 2
-        },
-        {
-          "eye": "grapheneGate",
-          "via": "adb",
-          "transports": [
-            "usb",
-            "wifi"
-          ],
-          "open": 1
         }
       ],
-      "eyes_open": 3,
+      "eyes_open": 2,
       "blind": [],
       "processes": 4,
-      "iphone_last_seen_s": 363479,
+      "iphone_last_seen_s": 376711,
       "status": "OPEN"
     }
   }

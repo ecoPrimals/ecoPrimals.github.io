@@ -7,21 +7,12 @@
       "eye": "rustdesk",
       "via": "retinal-cells",
       "open": 2
-    },
-    {
-      "eye": "grapheneGate",
-      "via": "adb",
-      "transports": [
-        "usb",
-        "wifi"
-      ],
-      "open": 1
     }
   ],
-  "eyes_open": 3,
+  "eyes_open": 2,
   "blind": [],
   "processes": 4,
-  "iphone_last_seen_s": 363480,
+  "iphone_last_seen_s": 376711,
   "status": "OPEN",
   "terra": {
     "species_count": 20,

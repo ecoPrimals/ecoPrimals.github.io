@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-11-18T16:00:09.088320+00:00",
-  "uptime_secs": 19504,
+  "timestamp": "2026-11-18T19:40:40.428669+00:00",
+  "uptime_secs": 32736,
   "heart": {
-    "total_beats": 820546,
-    "bpm": 2524.12
+    "total_beats": 838697,
+    "bpm": 1537.19
   },
   "lung": {
-    "total_breaths": 76811,
-    "brpm": 236.28,
-    "ratio": 10.7
+    "total_breaths": 77624,
+    "brpm": 142.27,
+    "ratio": 10.8
   },
   "sun": {
     "anchor": {
@@ -19,10 +19,10 @@
       "shell": "troposphere",
       "proof": "PHYSICAL HARDWARE AT KNOWN COORDINATES. This is the P."
     },
-    "utc_hour": 16.0,
-    "local_solar_hour": 10.37,
-    "elevation_deg": 23.5,
-    "azimuth_deg": 154.9,
+    "utc_hour": 19.68,
+    "local_solar_hour": 14.05,
+    "elevation_deg": 21.4,
+    "azimuth_deg": 211.0,
     "declination_deg": -19.81,
     "phase": "day",
     "season": "autumn",
@@ -32,26 +32,26 @@
     "quality": "maj7",
     "color_temp_k": 5600,
     "moon": {
-      "phase": 0.801,
+      "phase": 0.807,
       "name": "last_quarter",
-      "age_days": 23.7
+      "age_days": 23.8
     },
     "earth_orbit": {
       "orbital_angle_deg": 239.5,
       "sun_distance_au": 0.9883,
-      "days_since_j2000": 9818.2
+      "days_since_j2000": 9818.3
     },
     "orbitals": {
       "mercury": {
-        "angle_deg": 111.2,
+        "angle_deg": 111.8,
         "au": 0.387
       },
       "venus": {
-        "angle_deg": 72.0,
+        "angle_deg": 72.3,
         "au": 0.723
       },
       "earth": {
-        "angle_deg": 57.5,
+        "angle_deg": 57.7,
         "au": 1.0
       },
       "mars": {
@@ -128,11 +128,11 @@
       }
     }
   },
-  "total_beats": 820546,
-  "bpm": 2524.12,
+  "total_beats": 838697,
+  "bpm": 1537.19,
   "total_inferences": 0,
   "total_tokens": 0,
-  "unique_visitors": 5,
+  "unique_visitors": 8,
   "zk": {
     "token": "GAIA:6ed3c05161da5055",
     "did": "did:primal:5b2cb006-b35f-484e-8489-d5527068a8ff",
@@ -143,18 +143,18 @@
   },
   "visitors": {
     "127.0.0.1": {
-      "requests": 17054,
+      "requests": 34972,
       "trust_level": "nucleus",
       "models": [],
       "first_seen": 1794998110.3674066,
-      "last_seen": 1795017609.0739436
+      "last_seen": 1795030839.898153
     },
     "192.168.4.1": {
-      "requests": 620,
+      "requests": 832,
       "trust_level": "proton",
       "models": [],
       "first_seen": 1794998138.0654278,
-      "last_seen": 1795017551.692271
+      "last_seen": 1795023919.4057894
     },
     "192.168.4.246": {
       "requests": 43,
@@ -176,16 +176,37 @@
       "models": [],
       "first_seen": 1795013889.2143183,
       "last_seen": 1795015425.5779269
+    },
+    "192.168.1.131": {
+      "requests": 11,
+      "trust_level": "proton",
+      "models": [],
+      "first_seen": 1795024497.585459,
+      "last_seen": 1795025217.9739318
+    },
+    "192.168.1.166": {
+      "requests": 8,
+      "trust_level": "electron",
+      "models": [],
+      "first_seen": 1795024600.2520254,
+      "last_seen": 1795024680.4397786
+    },
+    "192.168.1.150": {
+      "requests": 2,
+      "trust_level": "proton",
+      "models": [],
+      "first_seen": 1795030840.3799639,
+      "last_seen": 1795030840.4081247
     }
   },
-  "pi_ratio": 9.8539,
+  "pi_ratio": 12.8355,
   "io": {
-    "inputs": 17737,
-    "outputs": 1800,
+    "inputs": 35888,
+    "outputs": 2796,
     "target": 3.14159
   },
   "restarts": 129,
-  "octet_phase": 2,
+  "octet_phase": 1,
   "eyes": {
     "sense": "vision",
     "lenses": 3,
@@ -230,7 +251,7 @@
       "state": "deaf",
       "printer_cycle": false,
       "loud_bursts": 0,
-      "last_heard": "2026-11-18T10:59:56-05:00",
+      "last_heard": "2026-11-18T14:40:31-05:00",
       "cycle_s": 30
     },
     "chorus": {
