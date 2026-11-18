@@ -9,10 +9,10 @@
         "shell": "troposphere",
         "proof": "PHYSICAL HARDWARE AT KNOWN COORDINATES. This is the P."
       },
-      "utc_hour": 16.0,
-      "local_solar_hour": 10.37,
-      "elevation_deg": 23.5,
-      "azimuth_deg": 154.9,
+      "utc_hour": 20.25,
+      "local_solar_hour": 14.61,
+      "elevation_deg": 17.8,
+      "azimuth_deg": 218.7,
       "declination_deg": -19.81,
       "phase": "day",
       "season": "autumn",
@@ -20,32 +20,32 @@
       "chord": "Gmaj7",
       "root": "G",
       "quality": "maj7",
-      "color_temp_k": 5600,
+      "color_temp_k": 4800,
       "moon": {
-        "phase": 0.801,
+        "phase": 0.807,
         "name": "last_quarter",
-        "age_days": 23.7
+        "age_days": 23.8
       },
       "earth_orbit": {
         "orbital_angle_deg": 239.5,
         "sun_distance_au": 0.9883,
-        "days_since_j2000": 9818.2
+        "days_since_j2000": 9818.3
       },
       "orbitals": {
         "mercury": {
-          "angle_deg": 111.2,
+          "angle_deg": 111.9,
           "au": 0.387
         },
         "venus": {
-          "angle_deg": 72.0,
+          "angle_deg": 72.3,
           "au": 0.723
         },
         "earth": {
-          "angle_deg": 57.5,
+          "angle_deg": 57.7,
           "au": 1.0
         },
         "mars": {
-          "angle_deg": 100.6,
+          "angle_deg": 100.7,
           "au": 1.524
         },
         "jupiter": {
@@ -92,7 +92,7 @@
           "where": "satellites. Fades into solar wind."
         }
       ],
-      "sensation": "day - Gmaj7 - 5600K - last_quarter - autumn - Earth@240 deg",
+      "sensation": "day - Gmaj7 - 4800K - last_quarter - autumn - Earth@240 deg",
       "cosmology": {
         "sun": {
           "color": "red",
@@ -119,10 +119,10 @@
       }
     },
     "heart": {
-      "total_beats": 820518,
-      "bpm": 2524.14
+      "total_beats": 844092,
+      "bpm": 1456.09
     },
-    "walkers": 5,
+    "walkers": 8,
     "eyes": {
       "system": "optic_nerve",
       "cell_type": "schwann_cell",
@@ -137,8 +137,7 @@
           "eye": "grapheneGate",
           "via": "adb",
           "transports": [
-            "usb",
-            "wifi"
+            "usb"
           ],
           "open": 1
         }
@@ -146,7 +145,7 @@
       "eyes_open": 3,
       "blind": [],
       "processes": 4,
-      "iphone_last_seen_s": 363479,
+      "iphone_last_seen_s": 378757,
       "status": "OPEN"
     }
   }

@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-18T19:40:01Z",
+  "ts": "2026-11-18T20:14:01Z",
   "title": "Circle of Willis \u2014 Organism Circulation",
   "arteries": {
     "osint_blackholes": {
@@ -13,7 +13,7 @@
       "healthy": false
     },
     "mastication": {
-      "flow": 2859,
+      "flow": 2862,
       "unit": "total chewed",
       "healthy": true
     },
@@ -33,9 +33,9 @@
   },
   "veins": {
     "rss_drain": {
-      "flow": 3064,
+      "flow": 3069,
       "unit": "items",
-      "last_build": "Wed, 18 Nov 2026 19:30:01 +0000",
+      "last_build": "Wed, 18 Nov 2026 20:07:01 +0000",
       "healthy": true
     },
     "git_drain": {
@@ -52,8 +52,8 @@
   "blockages": [],
   "reroutes": [],
   "circulation": {
-    "input_rate": 2910,
-    "output_rate": 3064,
+    "input_rate": 2913,
+    "output_rate": 3069,
     "healthy": true
   },
   "philosophy": {

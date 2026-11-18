@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-18T19:40:01Z",
+  "ts": "2026-11-18T20:10:01Z",
   "title": "Gaia Perception \u2014 living sense-scan",
   "gates": {
     "eastGate": {
@@ -36,7 +36,7 @@
     },
     "stalest": {
       "file": "cairn-sweep.json",
-      "age_h": 112.6
+      "age_h": 113.1
     }
   },
   "intake_flow": {
@@ -50,116 +50,116 @@
     "details": {
       "mushroom-braid": {
         "size": 0,
-        "age_h": 8.7,
+        "age_h": 9.2,
         "healthy": false
       },
       "mushroom-chipmunk-hears": {
-        "size": 3685,
+        "size": 3886,
         "age_h": 0.1,
         "healthy": true
       },
       "mushroom-compost": {
         "size": 0,
-        "age_h": 8.7,
+        "age_h": 9.2,
         "healthy": false
       },
       "mushroom-create": {
-        "size": 900,
+        "size": 950,
         "age_h": 0.1,
         "healthy": true
       },
       "mushroom-curiosity": {
-        "size": 3355,
+        "size": 3538,
         "age_h": 0.0,
         "healthy": true
       },
       "mushroom-ear": {
-        "size": 10920,
+        "size": 11520,
         "age_h": 0.0,
         "healthy": true
       },
       "mushroom-knome": {
-        "size": 26190,
+        "size": 27645,
         "age_h": 0.2,
         "healthy": true
       },
       "mushroom-learn": {
-        "size": 2538,
+        "size": 2679,
         "age_h": 0.1,
         "healthy": true
       },
       "mushroom-manifest": {
         "size": 0,
-        "age_h": 9.0,
+        "age_h": 9.5,
         "healthy": false
       },
       "mushroom-masticate": {
-        "size": 11936,
+        "size": 12602,
         "age_h": 0.2,
         "healthy": true
       },
       "mushroom-metrics": {
         "size": 0,
-        "age_h": 9.0,
+        "age_h": 9.5,
         "healthy": false
       },
       "mushroom-neuro": {
-        "size": 232112,
+        "size": 244894,
         "age_h": 0.1,
         "healthy": true
       },
       "mushroom-phosphate": {
-        "size": 34375,
+        "size": 36250,
         "age_h": 0.0,
         "healthy": true
       },
       "mushroom-publish": {
-        "size": 666,
+        "size": 703,
         "age_h": 0.2,
         "healthy": true
       },
       "mushroom-rss": {
-        "size": 7734,
+        "size": 8061,
         "age_h": 0.2,
         "healthy": true
       },
       "mushroom-sense-scan": {
-        "size": 25960,
+        "size": 27400,
         "age_h": 0.0,
         "healthy": true
       },
       "mushroom-study": {
-        "size": 2556,
+        "size": 2701,
         "age_h": 0.2,
         "healthy": true
       },
       "mushroom-teach": {
-        "size": 3096,
+        "size": 3268,
         "age_h": 0.1,
         "healthy": true
       },
       "mushroom-test": {
-        "size": 43647,
-        "age_h": 0.3,
+        "size": 46819,
+        "age_h": 0.1,
         "healthy": true
       },
       "mushroom-thymus": {
-        "size": 4687,
+        "size": 4945,
         "age_h": 0.0,
         "healthy": true
       },
       "mushroom-waterlock": {
-        "size": 9075,
+        "size": 9570,
         "age_h": 0.0,
         "healthy": true
       },
       "mushroom-wavefold": {
-        "size": 35061,
+        "size": 36999,
         "age_h": 0.0,
         "healthy": true
       },
       "mushroom-willis": {
-        "size": 13365,
+        "size": 14190,
         "age_h": 0.1,
         "healthy": true
       }
