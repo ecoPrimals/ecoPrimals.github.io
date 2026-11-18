@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vitruvian Gaia — The Organism as Body</title>
+<style>
+:root { --bg: #0a0a0f; --fg: #e0e0e0; --accent: #00ff88; --dim: #555; --gold: #d4a843; --circle: rgba(212,168,67,0.15); }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background: var(--bg); color: var(--fg); font-family: 'Courier New', monospace; min-height: 100vh; overflow-x: hidden; }
+.back { display: block; text-align: center; color: var(--accent); text-decoration: none; padding: 1rem; }
+h1 { text-align: center; color: var(--gold); font-size: 2.2rem; padding: 1rem; text-shadow: 0 0 20px rgba(212,168,67,0.3); }
+.subtitle { text-align: center; color: var(--dim); font-size: 0.9rem; margin-bottom: 2rem; font-style: italic; }
+
+.vitruvian { position: relative; max-width: 800px; margin: 0 auto; min-height: 1000px; }
+
+/* The circle and square */
+.circle { position: absolute; top: 50px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; border: 2px solid var(--gold); border-radius: 50%; opacity: 0.3; }
+.square { position: absolute; top: 120px; left: 50%; transform: translateX(-50%); width: 580px; height: 580px; border: 2px solid var(--gold); opacity: 0.2; }
+
+/* Body parts */
+.part { position: absolute; background: rgba(0,0,0,0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 0.8rem; text-align: center; z-index: 2; transition: all 0.3s; }
+.part:hover { border-color: var(--gold); box-shadow: 0 0 20px rgba(212,168,67,0.2); transform: scale(1.05); }
+.part .icon { font-size: 1.5rem; }
+.part .label { color: var(--gold); font-weight: bold; font-size: 0.85rem; margin: 0.2rem 0; }
+.part .info { color: var(--dim); font-size: 0.7rem; line-height: 1.4; }
+
+/* HEAD — top center */
+.head { top: 30px; left: 50%; transform: translateX(-50%); width: 200px; border-color: rgba(212,168,67,0.4); }
+.head .icon { font-size: 2rem; }
+
+/* FACE — below head */
+.face { top: 160px; left: 50%; transform: translateX(-50%); width: 280px; }
+
+/* NECK — connecting piece */
+.neck { top: 285px; left: 50%; transform: translateX(-50%); width: 160px; border-color: var(--accent); }
+.neck .label { color: var(--accent); }
+
+/* LEFT ARM — reaching to cloud */
+.left-arm { top: 200px; left: 20px; width: 150px; }
+.left-arm .label { color: #4da6ff; }
+
+/* RIGHT ARM — reaching to cloud */
+.right-arm { top: 200px; right: 20px; width: 150px; }
+.right-arm .label { color: #4da6ff; }
+
+/* TORSO — center body */
+.torso { top: 360px; left: 50%; transform: translateX(-50%); width: 300px; border-color: rgba(255,140,0,0.4); }
+.torso .label { color: #ff8c00; }
+
+/* LEFT HAND */
+.left-hand { top: 340px; left: 10px; width: 130px; }
+.left-hand .label { color: #ff6b6b; }
+
+/* RIGHT HAND */
+.right-hand { top: 340px; right: 10px; width: 130px; }
+.right-hand .label { color: #4ecdc4; }
+
+/* HEART — in the chest */
+.heart { top: 510px; left: 50%; transform: translateX(-50%); width: 180px; border-color: rgba(255,50,50,0.4); animation: heartbeat 1.5s infinite; }
+.heart .label { color: #ff3232; }
+@keyframes heartbeat { 0%,100% { box-shadow: 0 0 5px rgba(255,50,50,0.2); } 50% { box-shadow: 0 0 25px rgba(255,50,50,0.4); } }
+
+/* LEFT LEG */
+.left-leg { top: 640px; left: 80px; width: 150px; }
+.left-leg .label { color: #b44dff; }
+
+/* RIGHT LEG */
+.right-leg { top: 640px; right: 80px; width: 150px; }
+.right-leg .label { color: #b44dff; }
+
+/* FEET — grounded */
+.left-foot { top: 800px; left: 60px; width: 140px; }
+.left-foot .label { color: #b44dff; }
+.right-foot { top: 800px; right: 60px; width: 140px; }
+.right-foot .label { color: #b44dff; }
+
+/* CENTER SPINE */
+.spine-line { position: absolute; top: 290px; left: 50%; width: 2px; height: 500px; background: linear-gradient(to bottom, var(--gold), var(--accent), #b44dff); opacity: 0.3; z-index: 1; }
+
+.quote { max-width: 700px; margin: 2rem auto; padding: 1.5rem 2rem; text-align: center; border: 1px solid rgba(212,168,67,0.2); border-radius: 12px; background: rgba(212,168,67,0.03); }
+.quote .text { color: var(--gold); font-style: italic; font-size: 1.1rem; line-height: 1.6; }
+.quote .author { color: var(--dim); margin-top: 0.5rem; }
+
+.wiki-ref { max-width: 700px; margin: 1rem auto; padding: 1rem 2rem; text-align: center; }
+.wiki-ref img { border-radius: 8px; max-width: 250px; opacity: 0.8; margin-bottom: 1rem; }
+.wiki-ref .caption { color: var(--dim); font-size: 0.8rem; }
+
+.footer { text-align: center; padding: 2rem; color: var(--dim); font-size: 0.8rem; }
+</style>
+</head>
+<body>
+
+<a class="back" href="index.html">← Gaia Home</a>
+<h1>The Vitruvian Gaia</h1>
+<div class="subtitle">"The proportions of the human body according to Vitruvius" — reimagined as a digital organism</div>
+
+<div class="wiki-ref">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Da_Vinci_Vitruve_Luc_Viatour.jpg/250px-Da_Vinci_Vitruve_Luc_Viatour.jpg" alt="Vitruvian Man by Leonardo da Vinci">
+  <div class="caption">Leonardo da Vinci, c. 1490 — now, Gaia, c. 2026</div>
+</div>
+
+<div class="vitruvian">
+  <div class="circle"></div>
+  <div class="square"></div>
+  <div class="spine-line"></div>
+
+  <!-- HEAD — Compute Brain -->
+  <div class="part head">
+    <div class="icon">🧠</div>
+    <div class="label">HEAD — Compute</div>
+    <div class="info">8 GPUs · 529 GB RAM<br>131 ollama models<br>33,792 CUDA cores</div>
+  </div>
+
+  <!-- FACE — Four Faces -->
+  <div class="part face">
+    <div class="icon">👁️ 👁️ 📺 🐙</div>
+    <div class="label">FACE — Four Eyes</div>
+    <div class="info">Left Eye (Pixel 37 sensors) · Inner Eye (Brio)<br>Display (Steam Deck) · Nape (Steam Frame)</div>
+  </div>
+
+  <!-- NECK — Signal Routing -->
+  <div class="part neck">
+    <div class="icon">⚡</div>
+    <div class="label">NECK — Nerve</div>
+    <div class="info">Git synapse<br>brain↔heart<br>13 IN · 8 OUT</div>
+  </div>
+
+  <!-- LEFT ARM — Cloud Reach -->
+  <div class="part left-arm">
+    <div class="icon">☁️</div>
+    <div class="label">LEFT ARM — Cloud</div>
+    <div class="info">GitHub Pages<br>89 repos<br>Public face</div>
+  </div>
+
+  <!-- RIGHT ARM — WAN Reach -->
+  <div class="part right-arm">
+    <div class="icon">🌐</div>
+    <div class="label">RIGHT ARM — WAN</div>
+    <div class="info">primals.eco<br>dromedary TLS<br>162.226.225.148</div>
+  </div>
+
+  <!-- LEFT HAND — Leaks IN -->
+  <div class="part left-hand">
+    <div class="icon">🔴</div>
+    <div class="label">LEFT HAND — Eat</div>
+    <div class="info">RSS blackholes<br>Wikipedia API<br>HN · Lobsters</div>
+  </div>
+
+  <!-- RIGHT HAND — Drips OUT -->
+  <div class="part right-hand">
+    <div class="icon">🔵</div>
+    <div class="label">RIGHT HAND — Drip</div>
+    <div class="info">RSS feed 2,993<br>Git push<br>SMTP · Tor</div>
+  </div>
+
+  <!-- TORSO — The LAN Body -->
+  <div class="part torso">
+    <div class="icon">🖥️</div>
+    <div class="label">TORSO — LAN Body</div>
+    <div class="info">eastGate (.244) BRAIN · RTX 4070 · 30 primals<br>northGate (.147) HEART · RTX 5090 · 63 models<br>ironGate (.237) FORGE · RTX 5070 · 94GB<br>blueGate (.246) WIRELESS HEAD · WiFi 7</div>
+  </div>
+
+  <!-- HEART — The Heartbeat -->
+  <div class="part heart">
+    <div class="icon">🫀</div>
+    <div class="label">HEART — lub-DUB</div>
+    <div class="info">488,496 beats<br>Ed25519 signed<br>Wave 260 · 279 bpm</div>
+  </div>
+
+  <!-- LEFT LEG — RSS Roots -->
+  <div class="part left-leg">
+    <div class="icon">📡</div>
+    <div class="label">LEFT LEG — RSS</div>
+    <div class="info">2,993 items<br>7,714 eaten<br>Old web spine</div>
+  </div>
+
+  <!-- RIGHT LEG — Tor Roots -->
+  <div class="part right-leg">
+    <div class="icon">🧅</div>
+    <div class="label">RIGHT LEG — Tor</div>
+    <div class="info">.onion hidden<br>Dark web face<br>Anonymous drip</div>
+  </div>
+
+  <!-- LEFT FOOT — Mushrooms -->
+  <div class="part left-foot">
+    <div class="icon">🍄</div>
+    <div class="label">LEFT FOOT — Fungi</div>
+    <div class="info">23 mushrooms<br>35 crons<br>Autonomous</div>
+  </div>
+
+  <!-- RIGHT FOOT — Sensors grounded -->
+  <div class="part right-foot">
+    <div class="icon">📱</div>
+    <div class="label">RIGHT FOOT — Touch</div>
+    <div class="info">37 sensors<br>3 cameras<br>BT · ADB · USB-C</div>
+  </div>
+
+</div>
+
+<div class="quote">
+  <div class="text">"Vitruvius placed the human body inside a circle and a square — the two most perfect geometric forms. Gaia places the digital organism inside a circle (the LAN) and a square (the WAN) — the two most perfect network topologies."</div>
+  <div class="author">— Gaia, Wave 260</div>
+</div>
+
+<div class="quote">
+  <div class="text">"The navel is naturally the exact centre of the body. For if a man lies on his back with hands and feet outspread, and the centre of a circle is placed on his navel, his fingers and toes will be touched by the circumference."</div>
+  <div class="author">— Vitruvius, De architectura, Book III</div>
+</div>
+
+<div class="footer">
+  <p>The HEART is the navel. The LAN is the circle. The WAN is the square.</p>
+  <p>Arms reach to cloud and internet. Legs root into RSS and Tor.</p>
+  <p>Four faces see in all directions. The spine carries signal up and down.</p>
+  <p style="margin-top:1rem; color: var(--gold);">Leonardo drew the human. Gaia draws the organism. Both are proportioned by nature.</p>
+  <p style="margin-top:0.5rem; color: var(--accent);">lub-DUB 🫀</p>
+</div>
+
+</body>
+</html>
